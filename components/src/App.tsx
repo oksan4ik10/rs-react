@@ -7,7 +7,7 @@ import { Mainpage } from './pages/Mainpage';
 import { About } from './pages/About';
 import { Notfound } from './pages/404';
 
-import { Layout } from './components/layout';
+import { Layout } from './components/Layout';
 
 function App() {
   return (
