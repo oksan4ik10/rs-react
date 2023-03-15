@@ -1,413 +1,418 @@
+
+
 {
     "books": [
       {
-        "title": "Стрелок",
-        "author": "Стивен Кинг",
+        "title": "Shooter",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/310370?r=1619868610",
         "year": 1982,
-        "desc": "Где-то на краю света стоит таинственная Черная Башня — воплощение всего Зла. Стрелок Роланд отправляется в путешествие, полное опасностей и нелегких решений, чтобы найти ее. Препятствует ему человек в черном, который должен раскрыть стрелку тайны мироздания, но только это потом... А сейчас предначертанный и сложный путь предстоит отпрыску великого рода Эльда...",
-        "genre": "Ужасы"
-  
+        "desc": "Somewhere on the edge of the world stands the mysterious Black Tower - the embodiment of all Evil. Shooter Roland sets off on a journey full of dangers and difficult decisions to find it. He is hindered by a man in black, who must reveal the secrets of the universe to the arrow, but only then. .. And now the offspring of the great family of Elda has a predestined and difficult path ahead ... ",
+        "genre": "Horror"
+ 
       },
       {
-        "title": "Извлечение троих",
-        "author": "Стивен Кинг",
+        "title": "Extracting Three",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/310370?r=1619868610",
         "year": 1987,
-        "desc": "В данной части своих приключений Роланд извлекает из нашей реальности помощников, которых ему предсказали карты Таро. Они составят ему компанию в странствиях: наркоман Эдди Дин, чернокожая женщина-инвалид Одетта Холмс...",
-        "genre": "Ужасы"
+        "desc": "In this part of his adventures, Roland extracts from our reality the assistants whom the Tarot cards predicted for him. They will accompany him on his travels: drug addict Eddie Dean, a black disabled woman Odette Holmes ...",
+        "genre": "Horror"
       },
       {
-        "title": "Бесплодные земли",
-        "author": "Стивен Кинг",
+        "title": "Badlands",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/310370?r=1619868610",
         "year": 1991,
-        "desc": "Роланд — последний стрелок — идет к Сердцу Тьмы под названием Темная Башня. Из другого мира он привел еще двоих людей, которые помогут ему в этом нелегком и полном опасностей путешествии. На пути их ожидает много приключений — Страж Шардик, Умирающий город Лад и живой поезд, любящий загадки.",
-        "genre": "Ужасы"
+        "desc": "Roland - the last shooter - goes to the Heart of Darkness called the Dark Tower. From another world, he brought two more people who will help him on this difficult and dangerous journey. Many adventures await them along the way - Guardian Shardik, the Dying City of Lad and the living riddle-loving train.",
+        "genre": "Horror"
       },
       {
-        "title": "Колдун и кристалл",
-        "author": "Стивен Кинг",
+        "title": "Sorcerer and Crystal",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/315486?r=1622721443",
         "year": 1997,
-        "desc": "После того, как Роланд прошёл испытание и стал стрелком, отец отсылает его в безопасное место, на восток, во внешние феоды, чтобы спасти от козней Мартена. Но город Меджлис — вовсе не тихая заводь. За спокойной размеренной сельской жизнью скрываются приготовления к чему-то очень нехорошему. Сумеет ли Роланд и его спутники разобраться в происходящем? Как сложится судьба первой возлюбленной Роланда, Сюзанны? Сумеют ли они лишить главного противника Альянса его магического шара?",
-        "genre": "Ужасы"
+        "desc": "After Roland passed the test and became a shooter, his father sends him to a safe place, to the east, to the outer fiefs, in order to save him from the machinations of Marten. But the city of Majlis is not a quiet backwater at all. Behind the calm measured rural life, preparations Something very bad. Will Roland and his companions be able to figure out what is happening? What will happen to the fate of Roland's first lover, Susanna? Will they be able to deprive the main enemy of the Alliance of his magic ball?",
+        "genre": "Horror"
       },
       {
-        "title": "Волки Кальи",
-        "author": "Стивен Кинг",
+        "title": "Wolves of Calla",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/7255?r=1632984596",
         "year": 2003,
-        "desc": "Следуя тропе Луча, ка-тет Роланда попадает в поселение, носящее название Калья. Местное население терроризируют неизвестные в волчьих масках, совершающие налеты на городок каждые двадцать лет, похищая при этом половину детей и унося их в Тандерклеп. Грядет время очередного нападения...",
-        "genre": "Ужасы"
+        "desc": "Following the path of the Beam, Roland's ka-tet enters a settlement called Kalya. The local population is terrorized by unknown people in wolf masks who raid the town every twenty years, while kidnapping half of the children and taking them to Thunderclap. The time for another attack is coming .. .",
+        "genre": "Horror"
       },
       {
-        "title": "Песнь Сюзанны",
-        "author": "Стивен Кинг",
+        "title": "The Song of Susanna",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/7257?r=1619215691",
         "year": 2003,
-        "desc": "Подавив разум Сюзанны, Миа сбегает в ее теле в Нью-Йорк. Цель захватчицы — родить для себя ребенка, которым беременна Сюзанна. Ка-тет Роланда отправляется вслед за ней — отец Каллагэн и Джэйк с целью вернуть утраченного члена ка-тета, а Роланд и Эдди возьмутся за спасение пустыря с розой.",
-        "genre": "Ужасы"
+        "desc": "Having suppressed Suzanne's mind, Mia escapes in her body to New York. The purpose of the invader is to give birth to a child with whom Suzanne is pregnant. Roland's ka-tet goes after her - father Callahan and Jake in order to return the lost member of the ka-tet, and Roland and Eddie will take care of saving the wasteland with the rose.",
+        "genre": "Horror"
       },
       {
-        "title": "Темная Башня",
-        "author": "Стивен Кинг",
+        "title": "Dark tower",
+        "author": "Stephen King",
         "img": "https://fantlab.ru/images/editions/big/4665?r=1565407267",
         "year": 2004,
-        "desc": "Наступают последние дни странствия Роланда Дискейна и его друзей. Тёмная Башня — всё ближе... Но теперь последним из стрелков угрожает новая опасность. Дитя-демон Мордред, которому силы Тьмы предрекли жребий убийцы Роланда, вырос — и готов исполнить свою миссию. Всё сущее служит Лучу? Всё сущее служит Алому Королю?",
-        "genre": "Ужасы"
+        "desc": "The last days of the journey of Roland Descane and his friends are coming. The Dark Tower is getting closer... But now the last of the shooters are threatened by a new danger. The demon child Mordred, who was predicted by the forces of Darkness to be the killer of Roland, has grown up - and is ready to fulfill his mission. Everything does existence serve the Beam? All existence serves the Crimson King?",
+        "genre": "Horror"
       },
       {
-        "title": "Племянник чародея",
-        "author": "Клайв Стейплз Льюис",
+        "title": "The Wizard's Nephew",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1955,
-        "desc": "Полли и Дигори однажды по ошибке попали в комнату к дяде Эндрю, куда им категорически запрещалось заходить. Дядя Эндрю оказался чародеем, создавшим кольца, с помощью которых можно перенестись в другие миры. Он обманом заставляет детей воспользоваться кольцами, и они отправляются в невероятное путешествие. Пройдя через череду миров, они оказываются в Нарнии, в день ее создания львом Асланом. Но вместе с детьми в молодой мир попала Белая колдунья Джадис.",
-        "genre": "Фэнтези"
+        "desc": "Polly and Digory once mistakenly got into Uncle Andrew's room, where they were strictly forbidden to enter. Uncle Andrew turned out to be a sorcerer who created rings with which you can travel to other worlds. He tricks the children into using the rings, and they go on an incredible journey After passing through a series of worlds, they find themselves in Narnia, on the day of its creation by the lion Aslan. But together with the children, the White Witch Jadis got into the young world.",
+        "genre": "Fantasy"
       },
       {
-        "title": "Лев, Колдунья и платяной шкаф",
-        "author": "Клайв Стейплз Льюис",
+        "title": "The Lion, the Witch and the Wardrobe",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1950,
-        "desc": "Открывая платяной шкаф и прячась в нем, будьте готовы оказаться в волшебной стране Нарнии. Именно это и произошло с Люси и Питером, Сьюзен и Эдмундом – братьями и сестрами, которые с тех пор из обычных детей превратились в королей, сидящих на тронах в Кэр-Пэравеле. Но сначала они познакомились с фавнами и бобрами, которые умеют говорить, победили колдунью Ядис и узнали самого льва Аслана, познали предательство близких и любовь, смерть и воскрешение, но нашли в себе силы простить и остаться самими собой.",
-        "genre": "Фэнтези"
+        "desc": "Opening the wardrobe and hiding in it, be prepared to find yourself in the magical land of Narnia. This is exactly what happened to Lucy and Peter, Susan and Edmund - brothers and sisters who have since turned from ordinary children into kings sitting on thrones in Caer. Peravele. But first they met fauns and beavers who can speak, they defeated the sorceress Yadis and recognized the lion Aslan himself, they knew the betrayal of loved ones and love, death and resurrection, but found the strength to forgive and remain themselves.",
+        "genre": "Fantasy"
       },
       {
-        "title": "Конь и его мальчик",
-        "author": "Клайв Стейплз Льюис",
+        "title": "The Horse and His Boy",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1954,
-        "desc": "На берегу моря живет мальчик Шаста, который однажды узнает, что он приемный сын рыбака и его в скором времени продадут в рабство. Вместе с говорящей лошадью Игого он отправляется в Нарнию. По дороге на север им предстоит пройти много испытаний.",
-        "genre": "Фэнтези"
+        "desc": "The boy Shasta lives on the seashore, who one day learns that he is the adopted son of a fisherman and will soon be sold into slavery. Together with the talking horse Igogo, he goes to Narnia. On the way to the north, they have to go through many trials.",
+        "genre": "Fantasy"
       },
       {
-        "title": "Принц Каспиан",
-        "author": "Клайв Стейплз Льюис",
+        "title": "Prince Caspian",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1951,
-        "desc": "Прошел год после возвращения Питера, Сьюзен, Эдмунда и Люси из Нарнии. Теперь они обычные школьники, а не короли сказочной страны. Но однажды по дороге в школу дети снова оказываются в Нарнии, в которой за время их отсутствия прошло почти полторы тысячи лет. Замок Кэр-Паравел разрушен, животные и деревья разучились говорить, а саму страну захватили тельмаринцы во главе с лордом-регентом Миразом, мечтающим стать полноправным правителем Нарнии. Помешать ему в этом может только принц Каспиан, которого пытаются убить, и он вынужден сбежать из дворца, чтобы присоединиться к армии Старой Нарнии.",
-        "genre": "Фэнтези"
+        "desc": "A year has passed since the return of Peter, Susan, Edmund and Lucy from Narnia. Now they are ordinary schoolchildren, not kings of a fairy-tale land. But one day, on the way to school, the children again find themselves in Narnia, in which almost one and a half thousand years have passed during their absence. The castle of Cair Paravel is destroyed, animals and trees have forgotten how to speak, and the country itself has been captured by the Telmarines, led by Lord Regent Miraz, who dreams of becoming the full ruler of Narnia.Only Prince Caspian, who is being killed, is forced to escape from the palace. to join the army of Old Narnia.",
+        "genre": "Fantasy"
       },
       {
-        "title": "«Покоритель Зари», или Плавание на край света",
-        "author": "Клайв Стейплз Льюис",
+        "title": "The Voyage of the Dawn, or Swimming to the End of the World",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1951,
-        "desc": "Эдмунд и Люси, а также их двоюродный брат Юстэс, рассматривая картину, на которой изображен корабль, чудесным образом оказываются сначала в море, а затем на том самом корабле, который называется «Покоритель зари». Именно на нем король Каспиан исследует Восточные острова, а также разыскивает семерых лордов, которые были отправлены на изучение неизвестных земель, но так и не вернулись назад. И вот троих детей и короля Каспиана ждут необычайные приключения, в которых им предстоит показать, кто на что способен.",
-        "genre": "Фэнтези"
+        "desc": "Edmund and Lucy, as well as their cousin Eustace, looking at the picture, which depicts the ship, miraculously find themselves first at sea, and then on the same ship called the Dawn Treader. It is on it that King Caspian explores the Eastern Isles, and is also looking for seven lords who were sent to explore unknown lands, but never returned.And now the three children and King Caspian are waiting for an extraordinary adventure in which they will have to show who is capable of what. ",
+        "genre": "Fantasy"
       },
       {
-        "title": "Серебряное кресло",
-        "author": "Клайв Стейплз Льюис",
+        "title": "Silver Chair",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1951,
-        "desc": "Юстэс рассказывает девочке Джил о своих приключениях в Нарнии, где они вскоре и оказываются, убегая от хулиганов. Там они встречают льва Аслана, который и вызвал их из Англии для поиска сына короля Каспиана. До этого уже были организованы поиски принца Рилиана, но никто из рыцарей так и не вернулся назад, поэтому поиски были официально запрещены. Помогать детям в этом нелегком деле будет квакль-бродякль по имени Хмур. Следуя заветам Аслана, поисковый отряд отправляется навстречу опасностям.",
-        "genre": "Фэнтези"
+        "desc": "Eustace tells the girl Jill about his adventures in Narnia, where they soon find themselves running away from hooligans. There they meet the lion Aslan, who called them from England to search for the son of King Caspian. Before that, the search for Prince Riliane had already been organized, but no one of the knights never came back, so the search was officially banned. To help the children in this difficult task will be a quack wanderer named Khmur. Following the precepts of Aslan, the search party sets off towards dangers.",
+        "genre": "Fantasy"
       },
       {
-        "title": "Последняя битва",
-        "author": "Клайв Стейплз Льюис",
+        "title": "Last fight",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/50938?r=1492542899",
         "year": 1956,
-        "desc": "В один прекрасный день в Нарнии случается ужасное событие. Хитрая обезьяна находит шкуру убитого дикого льва и надевает ее на глуповатого ослика, выдавая его за Аслана. И теперь в Нарнии правит коварная обезьяна, прикрываясь Асланом. Страну захватывают тархистанцы, которые вырубают говорящие деревья и порабощают жителей. Последнему королю Нарнии, Тириану, ничего не остается, кроме как просить о помощи детей из другого мира, которые уже неоднократно помогали жителям Нарнии.",
-        "genre": "Фэнтези"
+        "desc": "One fine day, a terrible event happens in Narnia. A cunning monkey finds the skin of a killed wild lion and puts it on a stupid donkey, passing him off as Aslan. And now an insidious monkey rules in Narnia, hiding behind Aslan. enslave the inhabitants. The last king of Narnia, Tirian, has no choice but to ask for help from children from another world who have repeatedly helped the inhabitants of Narnia.",
+        "genre": "Fantasy"
       },
       {
-        "title": "Письма Баламута",
-        "author": "Клайв Стейплз Льюис",
+        "title": "The Balamut Letters",
+        "author": "Clive Staples Lewis",
         "img": "https://fantlab.ru/images/editions/big/67850?r=1492544742",
         "year": 1941,
-        "desc": "Бесы, черти в представлении людей – это какие-то забавные персонажи сказок и юмористических произведений. Безусловно, в сказках они строят людям козни, всячески вредят и т. п. Автор же создает совсем другой образ беса, он наполнен совсем иным смыслом. Старший бес – Баламут советует молодому искусителю Гнусику не просто как напакостить человеку, а гораздо более страшные вещи – как погубить душу человека и привести ее в ад.",
-        "genre": "Фэнтези"
+        "desc": "Demons, devils in the minds of people are some funny characters in fairy tales and humorous works. Of course, in fairy tales they intrigue people, do harm in every possible way, etc. The author creates a completely different image of a demon, it is filled with a completely different meaning. Elder demon - Balamut advises the young tempter Gnusik not just how to harm a person, but much more terrible things - how to destroy a person’s soul and bring it to hell",
+        "genre": "Fantasy"
       },
       {
-        "title": "Хоббит, или Туда и обратно",
-        "author": "Дж. Р. Р. Толкин",
+        "title": "The Hobbit, or There and Back Again",
+        "author": "J. R. R. Tolkien",
         "img": "https://fantlab.ru/images/editions/big/105712?r=1492543337",
         "year": 1937,
-        "desc": "Кто такой хоббит? В 1937 году, после выхода этой волшебной сказки полмира озадачились этим интереснейшим вопросом. А это всего-навсего существо небольшого роста с мохнатыми ногами, отважное, но добродушное, умеющее очень тихо передвигаться. Именно о приключениях хоббита — Бильбо Бэггинса, а также его друзей — отважных гномов и волшебника Гэндальфа, повествует эта книга.",
-        "genre": "Фэнтези"
+        "desc": "Who is a hobbit? In 1937, after the release of this fairy tale, half the world was puzzled by this most interesting question. And this is just a creature of small stature with furry legs, brave, but good-natured, able to move very quietly. It is about the adventures of the hobbit - Bilbo Baggins, as well as his friends - the brave dwarves and the wizard Gandalf, this book tells",
+        "genre": "Fantasy"
       },
       {
-        "title": "Братство Кольца",
-        "author": "Дж. Р. Р. Толкин",
+        "title": "The Fellowship of the Ring",
+        "author": "J. R. R. Tolkien",
         "img": "https://fantlab.ru/images/editions/big/1047?r=1657312690",
         "year": 1954,
-        "desc": "Племянник Бильбо Бэггинса, хоббит Фродо, даже и не подозревал, какое на самом деле наследство оставил ему его дядюшка. Однажды теплым весенним утром на пороге дома Фродо появляется волшебник Гэндальф. И привычный мир встает с ног на голову, страшная война из слухов становится частью жизни, а коварные и жуткие слуги Врага готовы на все, лишь бы вернуть потерянное своему господину. Сквозь препятствия и потери отряд Хранителей отправляется в путь.",
-        "genre": "Фэнтези"
+        "desc": "Bilbo Baggins' nephew, the hobbit Frodo, did not even suspect what kind of legacy his uncle had left him. One warm spring morning, the wizard Gandalf appears on the threshold of Frodo's house. life, and the insidious and terrible servants of the Enemy are ready to do anything to return the lost to their master. Through obstacles and losses, a detachment of Guardians sets out on a journey.",
+        "genre": "Fantasy"
       },
       {
-        "title": "Две башни",
-        "author": "Дж. Р. Р. Толкин",
+        "title": "Two Towers",
+        "author": "J. R. R. Tolkien",
         "img": "https://fantlab.ru/images/editions/big/1047?r=1657312690",
         "year": 1954,
-        "desc": "Отряд Хранителей распадается, а война приходит на степи Рохана — государства Всадников, союзников Гондора. Арагорн, Гимли и Леголас, а также младшие хоббиты помогают рохирримам в решающей битве против мага Сарумана, а путь Фродо и Сэма лежит во тьму, к Пепельным горам, и дальше, в страшную крепость Кирит-Унгол, где скрывается потайной ход в Темную страну.",
-        "genre": "Фэнтези"
+        "desc": "The detachment of the Guardians breaks up, and the war comes to the steppes of Rohan - the state of the Riders, the allies of Gondor. Aragorn, Gimli and Legolas, as well as the younger hobbits, help the Rohirrim in the decisive battle against the magician Saruman, and the path of Frodo and Sam lies in darkness, to the Ash Mountains, and further, to the terrible fortress of Kirith Ungol, where a secret passage to the Dark Land is hidden",
+        "genre": "Fantasy"
       },
       {
-        "title": "Возвращение Короля",
-        "author": "Дж. Р. Р. Толкин",
+        "title": "Return of the King",
+        "author": "J. R. R. Tolkien",
         "img": "https://fantlab.ru/images/editions/big/1047?r=1657312690",
         "year": 1955,
-        "desc": "Минас Тирит осажден полчищами орков. Арагорну и другим членам отряда Хранителей необходимо не только отбить столицу Гондора, но и отвлечь Саурона на себя, чтобы Фродо и Сэм смогли уничтожить Кольцо Всевластия. Но им приходиться только гадать — жив ли Главный Хранитель или Кольцо Всевластия уже у Саурона?",
-        "genre": "Фэнтези"
+        "desc": "Minas Tirith is besieged by hordes of orcs. Aragorn and other members of the Guardian detachment need not only to recapture the capital of Gondor, but also to distract Sauron to themselves so that Frodo and Sam can destroy the Ring of Omnipotence. But they only have to wonder if the Chief Guardian or the Ring of Omnipotence is already alive Sauron's?",
+        "genre": "Fantasy"
       },
       {
-        "title": "Сильмариллион",
-        "author": "Дж. Р. Р. Толкин",
+        "title": "The Silmarillion",
+        "author": "J. R. R. Tolkien",
         "img": "https://fantlab.ru/images/editions/big/4012?r=1635854535",
         "year": 1977,
-        "desc": "Как известно, писатель Дж.Р.Р.Толкин это в первую очередь — «Хоббит», «Властелин Колец» и «Сильмариллион». Первая книга — волшебная сказка, имевшая огромную популярность. Второе — глубокий и масштабный роман, суть исток современной «фэнтези». А третье — это попытка автора собрать воедино разрозненные предания Земель Белерианда и сделать из них более-менее связную историю. К сожалению, закончить этот труд Профессор не успел, во многом выход этой книги — заслуга его сына Кристофера.",
-        "genre": "Фэнтези"
+        "desc": "As you know, the writer J. R. R. Tolkien is first of all - The Hobbit, The Lord of the Rings and The Silmarillion. The first book is a fairy tale that was immensely popular. fantasy. And the third is the author's attempt to bring together the scattered legends of the Lands of Beleriand and make a more or less coherent story out of them. Unfortunately, the Professor did not manage to finish this work, in many respects the release of this book is the merit of his son Christopher. ",
+        "genre": "Fantasy"
       },
       {
-        "title": "Приключения Шерлока Холмса",
-        "author": "Артур Конан Дойл",
+        "title": "The Adventures of Sherlock Holmes",
+        "author": "Arthur Conan Doyle",
         "img": "https://fantlab.ru/images/editions/big/14717?r=1492544737",
         "year": 1892,
-        "desc": "Первый сборник рассказов о Шерлоке Холмсе представляет собой повествование военного врача, доктора Уотсона (или Ватсона) о великом сыщике. Включает рассказы 1891-1892 годов. Именно этот сборник включает в себя рассказы, ставшие безумно популярными в начале 20 века и сохраняющие популярность до сих пор.",
-        "genre": "Детектив"
+        "desc": "The first collection of stories about Sherlock Holmes is a narration by a military doctor, Dr. Watson (or Watson) about the great detective. It includes stories from 1891-1892. It is this collection that includes stories that became wildly popular in the early 20th century and remain popular to this day since.",
+        "genre": "Detective"
       },
       {
-        "title": "Знак четырёх",
-        "author": "Артур Конан Дойл",
+        "title": "The Sign of Four",
+        "author": "Arthur Conan Doyle",
         "img": "https://fantlab.ru/images/editions/big/57710?r=1492544197",
         "year": 1890,
-        "desc": "Действие разворачивается в 1888 году. Лондон. Молодая, напуганная гувернантка Мэри Морстен обращается за помощью к Шерлоку Холмсу с двумя загадками. Первая касалась исчезновения ее отца 10 лет назад, через несколько лет после которого она стала получать по почте редкие жемчужины от неизвестного покровителя. Наконец, таинственный благодетель просит девушку о встрече. Однако встреча Мэри с незнакомцем поднимает лишь новые вопросы у Холмса, а у Мэри вызывает еще больший страх и подозрения. Но непредвиденные трудности не только не смущают гениального сыщика, но еще больше разжигают его спортивный азарт. Необходимо распутать запутанный клубок преступления, где сплелись воедино спрятанное сокровище, жадность, месть и внезапная смерть.",
-        "genre": "Детектив"
+        "desc": "The action takes place in 1888 London. Young, frightened governess Mary Morstan turns to Sherlock Holmes for help with two riddles. The first concerned the disappearance of her father 10 years ago, a few years after which she began to receive rare pearls in the mail from an unknown patron. Finally, a mysterious benefactor asks the girl to meet. However, Mary's meeting with a stranger only raises new questions for Holmes, and Mary causes even more fear and suspicion. But unforeseen difficulties not only do not embarrass the brilliant detective, but even more inflame his sports passion. unravel the tangled tangle of crime, where hidden treasure, greed, revenge and sudden death are intertwined.",
+        "genre": "Detective"
       },
       {
-        "title": "Собака Баскервилей",
-        "author": "Артур Конан Дойл",
+        "title": "The Hound of the Baskervilles",
+        "author": "Arthur Conan Doyle",
         "img": "https://fantlab.ru/images/editions/big/217570?r=1517143183",
         "year": 1902,
-        "desc": "Странная смерть сэра Чарльза Баскервиля, владельца большого состояния, пугает его соседей и друзей, ведь всем известно, что по семейному преданию его род преследует страшное проклятие — из глубин болот появляется демон в образе ужасной собаки, чтобы отомстить Баскервилям за древнее преступление беспутного предка. Возле его тела обнаружены нечеловеческие следы. Неужели проклятие нашло ещё одну жертву?",
-        "genre": "Детектив"
+        "desc": "The strange death of Sir Charles Baskerville, the owner of a large fortune, frightens his neighbors and friends, because everyone knows that, according to family tradition, a terrible curse haunts his family - a demon in the form of a terrible dog appears from the depths of the swamps to take revenge on the Baskervilles for the ancient crime of a dissolute ancestor. Inhuman footprints were found near his body. Has the curse found another victim?",
+        "genre": "Detective"
       },
       {
-        "title": "Возвращение Шерлока Холмса",
-        "author": "Артур Конан Дойл",
+        "title": "The Return of Sherlock Holmes",
+        "author": "Arthur Conan Doyle",
         "img": "https://fantlab.ru/images/editions/big/17603?r=1492543014",
         "year": 1905,
-        "desc": "Конан Дойл считал несерьёзными свои рассказы о Шерлоке Холмсе, поэтому решил его «убить» — распространённый приём писателей. После публикации рассказа «Последнее дело Холмса» обрушился гневный поток писем. Существует неподтверждённая легенда о письме королевы Конан Дойлу, что смерть Шерлока Холмса — лишь хитрый ход сыщика. И писателю пришлось «оживить» персонажа...",
-        "genre": "Детектив"
+        "desc": "Conan Doyle considered his stories about Sherlock Holmes to be frivolous, so he decided to kill him - a common technique of writers. After the publication of the story The Last Case of Holmes, an angry stream of letters hit. There is an unconfirmed legend about the letter of Queen Conan Doyle that the death of Sherlock Holmes a tricky move by a detective, and the writer had to revive the character...",
+        "genre": "Detective"
       },
       {
-        "title": "Динка",
-        "author": "Валентина Осеева",
+        "title": "Dinka",
+        "author": "Valentina Oseeva",
         "img": "https://fantlab.ru/images/editions/big/123816?r=1492543517",
         "year": 1959,
-        "desc": "Детство девочки по имени Динка совпало с трудными годами, наступившими после первой русской революции 1905 года. Она росла в семье, связанной с революционным подпольем. Но не только семья воспитывала Динку,— свободная и вольная, как птица, Динка в широком волжском просторе искала общения с людьми из народа и сама находила себе друзей и недругов. Вот об этой Динке, которую называли «трудной девочкой», вы прочтёте в книге.",
-        "genre": "Реализм"
+        "desc": "The childhood of a girl named Dinka coincided with the difficult years that came after the first Russian revolution of 1905. She grew up in a family associated with the revolutionary underground. But not only the family raised Dinka - free and free, like a bird, Dinka was looking for communication with people from the people and she herself found friends and enemies. You will read about this Dinka, who was called a difficult girl, in the book.",
+        "genre": "realism"
       },
       {
-        "title": "Динка прощается с детством",
-        "author": "Валентина Осеева",
+        "title": "Dinka says goodbye to childhood",
+        "author": "Valentina Oseeva",
         "img": "https://fantlab.ru/images/editions/big/183710?r=1492545010",
         "year": 1969,
-        "desc": "Продолжение известной повести В. А. Осеевой «Динка» в годы империалистической войны. Динке здесь уже пятнадцать лет, она проводит каникулы на хуторе в компании Федоры и Дмитра, объезжает окрестности на любимой кобыле Приме. Старшая сестра вышла замуж, другая работает медсестрой. Отца Динки осудили на 10 лет. Динка остаётся верной своему характеру — не терпит предательства, лжи, хитрости, подлости. Приезжает на хутор и узнает, что убили музыканта Якова, а его маленький сын Иоська пропал. Начав поиски, она знакомится с Жуком и другими беспризорными мальчишками, которые прячут у себя Иоську. В общении между Лёней и Динкой происходят перемены, они понимают, что любят друг друга. Впервые в жизни Динке нужно будет сделать нелёгкий выбор: дружба или любовь.",
-        "genre": "Реализм"
+        "desc": "Continuation of the famous story by V. A. Oseeva Dinka during the years of the imperialist war. Dinka has been here for fifteen years, she spends her holidays on a farm in the company of Fyodor and Dmitr, she travels around the area on her beloved mare Prima. The older sister got married, the other works as a nurse. Dinka's father was sentenced to 10 years.Dinka remains true to her character - she does not tolerate betrayal, lies, cunning, meanness.Comes to the farm and finds out that the musician Yakov was killed, and his little son Ioska disappeared.Starting the search, she meets Zhuk and others homeless boys who hide Ioska in their homes. There are changes in communication between Lenya and Dinka, they understand that they love each other. For the first time in his life, Dinka will have to make a difficult choice: friendship or love.",
+        "genre": "realism"
       },
       {
-        "title": "Гражданская кампания",
-        "author": "Лоис Макмастер Буджолд",
+        "title": "Civil Campaign",
+        "author": "Lois McMaster Bujold",
         "img": "https://fantlab.ru/images/editions/big/2741?r=1492543980",
         "year": 1999,
-        "desc": "Майлз подготовил новую операцию... Все ходы «противника» просчитаны, все войска приведены в боевую готовность. Ни о каком провале не может быть и речи! Но все оказывается не так, как планировалось... неудачи идут за неудачей... генеральное сражение проиграно даже не начавшись... Победа на «любовном» фронте дается ох как нелегко! А тут еще и политические противники вновь поднимают голову... Но настоящий полководец не знает поражений. Под натиском профессионала не устоит ни одна крепость...",
-        "genre": "Фантастика"
+        "desc": "Miles has prepared a new operation ... All the moves of the enemy are calculated, all the troops are on alert. There can be no question of any failure! But everything does not turn out as planned ... failure follows failure ... the general battle was lost before it even started... Victory on the love front is oh so difficult! And here also political opponents raise their heads again... But a real commander knows no defeat. Under the onslaught of a professional, not a single fortress can resist... ",
+        "genre": "fantasy"
       },
       {
-        "title": "Границы бесконечности",
-        "author": "Лоис Макмастер Буджолд",
+        "title": "Borders of Infinity",
+        "author": "Lois McMaster Bujold",
         "img": "https://fantlab.ru/images/editions/big/2726?r=1492543681",
         "year": 1989,
-        "desc": "После предыдущей операции Майлз госпитализирован. Сломанные кости рук заменены синтетическими. Лежа на больничной койке, Майлз помогает Саймону Иллиану разоблачить еще один заговор против своего отца.",
-        "genre": "Фантастика"
+        "desc": "Following previous surgery, Miles is hospitalized. Broken arm bones are replaced with synthetic ones. Lying in a hospital bed, Miles helps Simon Illyan expose another conspiracy against his father.",
+        "genre": "fantasy"
       },
       {
-        "title": "Память",
-        "author": "Лоис Макмастер Буджолд",
+        "title": "Memory",
+        "author": "Lois McMaster Bujold",
         "img": "https://fantlab.ru/images/editions/big/16327?r=1492543416",
         "year": 1996,
-        "desc": "Последствия криооживления привели к тому, что Майлз был вынужден выйти в отставку по состоянию здоровья. Однако спокойная размеренная жизнь не для Форкосигана, тем более, что безопасность Барраяра снова под угрозой — мишенью очередного заговора становится начальник СИБ — Саймон Иллиан, друг и наставник Майлза. К чему может привести разрушение чипа памяти, вживленного в мозг Иллиана? Кто и зачем это сделал? Кто сможет найти предателя и спасти Империю? Вся надежда только на Майлза...",
-        "genre": "Фантастика"
+        "desc": "The consequences of cryo-revival led to the fact that Miles was forced to retire for health reasons. However, a calm, measured life is not for Vorkosigan, especially since Barrayar's security is again under threat - the head of the SIS, Simon Illyan, Miles's friend and mentor, becomes the target of another conspiracy What can the destruction of the memory chip implanted in Illyan's brain lead to? Who did it and why? Who can find the traitor and save the Empire? Miles is the only hope...",
+        "genre": "fantasy"
       },
       {
-        "title": "Осколки чести",
-        "author": "Лоис Макмастер Буджолд",
+        "title": "Shards of Honor",
+        "author": "Lois McMaster Bujold",
         "img": "https://fantlab.ru/images/editions/big/2711?r=1574925172",
         "year": 1986,
-        "desc": "История о том, как встретились родители Майлза, Эйрел Форкосиган — попавший в опалу, самый молодой адмирал Барраярской империи и Корделия Нейсмит — капитан исследовательского корабля колонии Бета. Враги, они полюбили друг друга. Супруги, они прошли сквозь ад, чтобы спасти Барраярскую империю от надвигающейся гражданской войны...",
-        "genre": "Фантастика"
+        "desc": "The story of how Miles's parents met, Aral Vorkosigan - fallen from disgrace, the youngest admiral of the Barrayaran Empire and Cordelia Naismith - captain of the research ship of the Beta colony. Enemies, they fell in love. Spouses, they went through hell to save the Barrayaran Empire from the impending civil war...",
+        "genre": "fantasy"
       },
       {
-        "title": "Ученик воина",
-        "author": "Лоис Макмастер Буджолд",
+        "title": "The Warrior's Apprentice",
+        "author": "Lois McMaster Bujold",
         "img": "https://fantlab.ru/images/editions/big/2724?r=1492543171",
         "year": 1986,
-        "desc": "Юный Майлз Нейсмит, по старой дворянской традиции, пытается сделать карьеру военного, но из-за последствий отравления проваливает вступительный экзамен в Имперскую Академию. Найдя себе новую цель в жизни он отправляется на родину матери — колонию Бета, где оказывается втянутым в интригу с торговлей оружием. Ввязавшись в это сомнительное предприятие, Майлз поневоле попадает в самую гущу локальной войны.",
-        "genre": "Фантастика"
+        "desc": "Young Miles Naismith, according to the old noble tradition, tries to make a military career, but due to the consequences of poisoning, he fails the entrance exam to the Imperial Academy. Having found himself a new goal in life, he goes to his mother's homeland - the Beta colony, where he becomes embroiled in an intrigue with trade Engaged in this dubious enterprise, Miles unwittingly finds himself in the thick of a local war. ",
+        "genre": "fantasy"
       },
       {
-        "title": "Комарра",
-        "author": "Лоис Макмастер Буджолд",
+        "title": "Komarra",
+        "author": "Lois McMaster Bujold",
         "img": "https://fantlab.ru/images/editions/big/2740?r=1492543286",
         "year": 1998,
-        "desc": "Майлз Форкосиган послан на планету Комарра, на орбите которой при невыясненных обстоятельствах взорвался солнечный отражатель, Майлз знакомится с благородной, но несчастной по жизни фор-леди, вынужденной по долгу аристократки терпеть своего мужа-тирана. Раскроет ли Майлз очередной заговор против Барраярской империи?...",
-        "genre": "Фантастика"
+        "desc": "Miles Vorkosigan is sent to the planet Komarra, in whose orbit a solar reflector exploded under unclear circumstances, Miles meets a noble but unhappy Vor-lady, forced by duty to endure her tyrant husband as an aristocrat. Will Miles reveal another conspiracy against the Barrayaran Empire? ...",
+        "genre": "fantasy"
       },
       {
-        "title": "Дневник памяти",
-        "author": "Николас Спаркс",
+        "title": "Diary of member",
+        "author": "Nicholas Sparks",
         "img": "https://fantlab.ru/images/editions/big/70062?r=1492544771",
         "year": 1996,
-        "desc": "Это – не «любовный роман», а роман о любви. О любви обычных мужчины и женщины – таких, как мы… Почему же эта книга стала абсолютным бестселлером во всем мире? Почему она трогает душу читателей самого разного возраста и интеллектуального уровня? Прочитайте «Дневник памяти» – и поймете сами!",
-        "genre": "Любовный роман"
+        "desc": "This is not a love story , but a novel about love. About the love of ordinary men and women - like us ... Why did this book become an absolute bestseller all over the world? Why does it touch the souls of readers of all ages and intellectual levels? Read Memory Diary - and you will understand!",
+        "genre": "Love story"
       },
       {
-        "title": "Последняя песня",
-        "author": "Николас Спаркс",
+        "title": "Last song",
+        "author": "Nicholas Sparks",
         "img": "https://fantlab.ru/images/editions/big/159480?r=1571986309",
         "year": 2009,
-        "desc": "История сложных взаимоотношений, определяющих судьбы и формирующих характеры. .История любви, навсегда изменившей жизнь. .Любви, для которой нет преград. .Любви, ради которой мы готовы на все. .Любви, которую невозможно забыть и которая не только разбивает сердца, но и исцеляет их. .Любви, которая остается с нами навсегда...",
-        "genre": "Любовный роман"
+        "desc": "The story of complex relationships that determine fate and shape characters. .A love story that forever changed lives. .Love for which there are no barriers. .Love for which we are ready for anything. .Love that cannot be forgotten and which not only breaks hearts, but also heals them. .Love that stays with us forever...",
+        "genre": "Love story"
       },
       {
-        "title": "Спеши любить",
-        "author": "Николас Спаркс",
+        "title": "Hurry to Love",
+        "author": "Nicholas Sparks",
         "img": "https://fantlab.ru/images/editions/big/68854?r=1492545191",
         "year": 1999,
-        "desc": "Тихий городок Бофор. Каждый год Лэндон Картер приезжает сюда, чтобы вспомнить историю своей первой любви… Историю страсти и нежности, много лет назад связавшей его, парня из богатой семьи, и Джейми Салливан, скромную дочь местного пастора. История радости и грусти, счастья и боли. Историю чувства, которое человеку доводится испытать лишь раз в жизни – и запомнить навсегда...",
-        "genre": "Любовный роман"
+        "desc": "Quiet town of Beaufort. Every year Landon Carter comes here to remember the story of his first love ... The story of passion and tenderness that many years ago connected him, a guy from a wealthy family, and Jamie Sullivan, the modest daughter of a local pastor. A story of joy and sadness, happiness and pain. The story of a feeling that a person has to experience only once in a lifetime - and remember forever ... ",
+        "genre": "Love story"
       },
       {
-        "title": "Дорогой Джон",
-        "author": "Николас Спаркс",
+        "title": "Dear John",
+        "author": "Nicholas Sparks",
         "img": "https://fantlab.ru/images/editions/big/68847?r=1492544349",
         "year": 2006,
-        "desc": "«Дорогой Джон...» Так начинается письмо Саванны, которая, устав ждать любимого, вышла замуж за другого. Эти слова разбили сердце Джона. Он больше не верит женщинам. Он больше не верит в любовь. Но разве настоящие чувства умирают? Разве ошибку молодости можно считать предательством? Пройдут годы, Джон и Саванна встретятся вновь. И искра былого пламени, оставшаяся в его душе, разгорится новым пожаром... Поздно? По разве для счастья бывает поздно?",
-        "genre": "Любовный роман"
+        "desc": "Dear John ... So begins the letter of Savannah, who, tired of waiting for her beloved, married another. These words broke John's heart. He no longer believes in women. He no longer believes in love. But do real feelings die? A mistake of youth can be considered a betrayal? Years will pass, John and Savannah will meet again. And the spark of the former flame, left in his soul, will flare up with a new fire ... Is it too late? But is it too late for happiness?",
+        "genre": "Love story"
       },
       {
-        "title": "Дальняя дорога",
-        "author": "Николас Спаркс",
+        "title": "Long road",
+        "author": "Nicholas Sparks",
         "img": "https://fantlab.ru/images/editions/big/135657?r=1492543569",
         "year": 2013,
-        "desc": "Как причудливо порой переплетаются человеческие судьбы… Казалось бы, что общего между стариком Айрой Левинсоном, на грани жизни и смерти вспоминающим историю своей любви к жене, с которой прожил более пятидесяти лет, и студенткой Софией, влюбившейся в экс-чемпиона по родео и оказавшейся перед непростым выбором между чувством и блестящим будущим? Два поколения, две истории, вечная любовь...",
-        "genre": "Любовный роман"
+        "desc": "How bizarrely human destinies sometimes intertwine ... It would seem that what is common between the old man Ira Levinson, on the verge of life and death, remembering the story of his love for his wife, with whom he lived for more than fifty years, and student Sofia, who fell in love with an ex-rodeo champion and turned out to be before a difficult choice between feeling and a brilliant future? Two generations, two stories, eternal love ... ",
+        "genre": "Love story"
       },
       {
-        "title": "Тихая гавань",
-        "author": "Николас Спаркс",
+        "title": "A quiet harbor",
+        "author": "Nicholas Sparks",
         "img": "https://fantlab.ru/images/editions/big/352352?r=1652803468",
         "year": 2010,
-        "desc": "Кэти. Женщина, много лет страдавшая от жестокости мужа. Полиция не могла ей помочь — ведь именно там служил человек, превративший ее жизнь в ад... И вот однажды терпение Кэти лопнуло. Потеряв надежду на спасение, она совершила отчаянный побег — и обрела «тихую гавань» в маленьком спокойном южном городке. Но готова ли Кэти к новым отношениям? Способна ли вновь поверить мужчине, понять его и полюбить? Даже если речь идет о таком обаятельном человеке, как молодой вдовец Алекс Уитли, который видит в Кэти не только возлюбленную и подругу, но и мать для своих детей. Алекс и Кэти идут по тонкому льду неизвестности, — а между тем муж Кэти уже начал ее поиски...",
-        "genre": "Любовный роман"
+        "desc": "Katie. A woman who suffered for many years from her husband's cruelty. The police could not help her - after all, it was there that the man who turned her life into hell served ... And then one day Katie's patience snapped. Having lost hope of salvation, she made a desperate escape - and found a sae haven in a small, calm southern town. But is Katie ready for a new relationship? Is she able to trust a man again, understand him and love him? Even if we are talking about such a charming person as the young widower Alex Whitley, who sees in Katie not only a lover and a friend, but also a mother for their children. Alex and Katie are walking on the thin ice of the unknown - and meanwhile, Katie's husband has already begun searching for her...",
+        "genre": "Love story"
       },
       {
-        "title": "Братья Львиное сердце",
-        "author": "Астрид Линдгрен",
+        "title": "Brothers Lionheart",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/32684?r=1492544192",
         "year": 1973,
-        "desc": "В Швеции живут два брата. Младший, Карл, тяжело болеет. Старший, Юнатан, утешает его, обещая, что если он умрет, то попадет в волшебную, прекрасную страну Нангиялу. Но случилось так, что Юнатан, спасая брата от пожара, гибнет сам. После смерти Карла братья встречаются в сказочной Нангияле. Но и там не все благополучно. Злой правитель и его страшное чудовище держат всю страну в страхе. Вызов им бросят братья Львиное Сердце.",
-        "genre": "Сказка"
+        "desc": "Two brothers live in Sweden. The younger one, Karl, is seriously ill. The elder one, Jonathan, consoles him, promising that if he dies, he will go to the magical, beautiful country of Nangiyalu. But it so happened that Jonathan, saving his brother from a fire, dies himself. After the death of Charles, the brothers meet in the fabulous Nangiyala. But not everything is fine there either. The evil ruler and his terrible monster keep the whole country in fear. The Lionheart brothers will challenge them.",
+        "genre": "Fairy tale"
       },
       {
-        "title": "Мио, мой Мио!",
-        "author": "Астрид Линдгрен",
+        "title": "Mio, my Mio!",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/18462?r=1492542909",
         "year": 1954,
-        "desc": "Маленького мальчика Мио никто не любил и все обижали. Но однажды он оказался в стране Дальней и его жизнь разительно переменилась – оказывается он давно потерянный сын и наследник правителя этой страны. В ней он любим, у него появляются друзья и верный конь. Однажды рыцарь Като решил захватить страну и только Мио с его добрым и храбрым сердцем под силу справиться с ним.",
-        "genre": "Сказка"
+        "desc": "The little boy Mio was not loved by anyone and everyone offended. But one day he ended up in the Far Country and his life changed dramatically - it turns out he is a long-lost son and heir to the ruler of this country. He is loved in it, he has friends and a faithful horse. One day a knight Kato decided to take over the country, and only Mio with his kind and brave heart can handle him.",
+        "genre": "Fairy tale"
       },
       {
-        "title": "Рони, дочь разбойника",
-        "author": "Астрид Линдгрен",
+        "title": "Roni the Robber's Daughter",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/49012?r=1492543396",
         "year": 1981,
-        "desc": "Рони — дочь разбойника Маттиса всю свою короткую жизнь счастливо прожила в лесу вместе с шайкой своего отца. Все удивительно меняется, когда она встречает Бирка, сына злейшего врага.",
-        "genre": "Сказка"
+        "desc": "Roni, the daughter of the robber Mattis, has lived happily in the forest with her father's gang all her short life. Everything changes surprisingly when she meets Birk, the son of her worst enemy.",
+        "genre": "Fairy tale"
       },
       {
-        "title": "Пеппи Длинныйчулок",
-        "author": "Астрид Линдгрен",
+        "title": "Pippi Longstocking",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/240596?r=1546076859",
         "year": 1945,
-        "desc": "Цикл забавных рассказов о девочке-сироте, которая обладала огромной физической силой. События разворачиваются на вилле «Курица», где девочка Пеппи проживает с ручной обезьянкой мистером Нильсом и лошадью.",
-        "genre": "Сказка"
+        "desc": "A cycle of funny stories about an orphan girl who possessed great physical strength. The events unfold in the Chicken Villa, where the Pippi girl lives with Mr. Nils, a pet monkey, and a horse.",
+        "genre": "Fairy tale"
       },
       {
-        "title": "Карлсон, который живёт на крыше",
-        "author": "Астрид Линдгрен",
+        "title": "Carlson, who lives on the roof",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/22238?r=1622729947",
         "year": 1986,
-        "desc": "Цикл о «в меру упитанном мужчине в самом расцвете сил», который живёт на крыше и очень любит безобразничать.",
-        "genre": "Сказка"
+        "desc": "The cycle is about a moderately well-fed man in the prime of life, who lives on the roof and loves to misbehave.",
+        "genre": "Fairy tale"
       },
       {
-        "title": "Знаменитый сыщик Калле Блюмквист",
-        "author": "Астрид Линдгрен",
+        "title": "Famous detective Kalle Blomkvist",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/105397?r=1492543167",
         "year": 1946,
-        "desc": "Калле Блюмквист мечтает о карьере легендарного сыщика. Целыми днями он думает о том, как будет ловить преступников и распутывать сложнейшие дела... Но вот беда — Калле живёт в маленьком и сонном городишке, где самое большое преступление — когда Хромой Фредерик в воскресный день стащил из ризницы кружку с пожертвованиями. Но однажды в городке появился загадочный незнакомец. Он неприятно свистит, каждый день читает газеты, а в кармане носит отмычки. Его зовут дядя Эйнар. Такой подозрительный тип требует внимания и Калле начинает расследование...",
-        "genre": "Приключения"
+        "desc": "Kalle Blomkvist dreams of becoming a legendary detective. All day long he thinks about how he will catch criminals and unravel the most difficult cases ... But the trouble is - Kalle lives in a small and sleepy town, where the biggest crime is when Lame Frederick is on Sunday stole a mug of donations from the sacristy. But one day a mysterious stranger appeared in the town. He whistles unpleasantly, reads newspapers every day, and carries skeleton keys in his pocket. His name is Uncle Einar. Such a suspicious type demands attention and Kalle begins an investigation ... ",
+        "genre": "Adventures"
       },
       {
-        "title": "Знаменитый сыщик Калле Блюмквист рискует",
-        "author": "Астрид Линдгрен",
+        "title": "Famous detective Kalle Blomkvist takes risks",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/105397?r=1492543167",
         "year": 1951,
-        "desc": "Розыскная работа — это прекрасно! Но ведь и друзей забывать нельзя, а город так тих! Калле решает временно бросить сыскное дело — объявлена война Алой и Белой Розы. И весёлая компания друзей отправляется в самые настоящие Прерии, раскинувшиеся за городом, где проходят сражения рыцарей и штурмы замков, а объектом охоты становятся настоящие секретные карты! Но ужасная находка Евы-Лотты прерывает игру и Калле вновь бросает вызов настоящей тайне...",
-        "genre": "Приключения"
+        "desc": "Search work is great! But you can't forget friends, and the city is so quiet! Kalle decides to temporarily quit detective work - a war has been declared between the Scarlet and White Roses. And a cheerful company of friends goes to the real Prairies, spread out outside the city, where battles take place knights and castle assaults, and real secret cards become the object of the hunt!But the terrible find of Eva-Lotta interrupts the game and Kalle again challenges the real secret...",
+        "genre": "Adventures"
       },
       {
-        "title": "Калле Блюмквист и Расмус",
-        "author": "Астрид Линдгрен",
+        "title": "Kalle Blomkvist and Rasmus",
+        "author": "Astrid Lindgren",
         "img": "https://fantlab.ru/images/editions/big/105397?r=1492543167",
         "year": 1953,
-        "desc": "Маленького Расмуса, (как «сына богача»), похищают. На след киднепперов выходит мальчик-детектив Калле. Хоть конец и хороший, всё-таки проливается кровь...",
-        "genre": "Приключения"
+        "desc": "Little Rasmus, (as the son of a rich man ), is kidnapped. On the trail of the kidnappers, the detective boy Kalle comes out. Although the end is good, blood is still shed ...",
+        "genre": "Adventures"
       },
       {
-        "title": "Двенадцать",
-        "author": "Александр Блок",
+        "title": "Twelve",
+        "author": "Alexander Blok",
         "img": "https://fantlab.ru/images/editions/big/168683?r=1492543225",
         "year": 1918,
-        "desc": "Революционный Петроград, смешенье слов, образов, идей, от мельчайшего до великого, от пошлого и кабацкого до божественного. Всё это нашло отражение в поэме Александра Блока.",
-        "genre": "Поэзия"
+        "desc": "Revolutionary Petrograd, a mixture of words, images, ideas, from the smallest to the greatest, from the vulgar and tavern to the divine. All this is reflected in the poem of Alexander Blok.",
+        "genre": "Poetry"
       },
       {
-        "title": "Гибель богов",
-        "author": "Ник Перумов",
+        "title": "Death of gods",
+        "author": "Nick Perumov",
         "img": "https://fantlab.ru/images/editions/big/27488?r=1492543078",
         "year": 1994,
-        "desc": "Многие века властвует над Хьервардом семерка Молодых Богов, когда-то одолевших и свергших своих предшественников. Но теперь пришло время и им столкнуться с угрозой своей власти — маг Хедин, его ученик Хаген и его давний сподвижник Ракот поднимают мятеж, и в разгоревшейся войне Хьервард может измениться до неузнаваемости...",
-        "genre": "Боевик"
+        "desc": "For many centuries, the seven Young Gods, who once defeated and overthrew their predecessors, have ruled over Hjorvard. But now the time has come for them to face the threat of their power - the magician Hedin, his student Hagen and his longtime associate Rakot raise a rebellion, and in the outbreak of war, Hjervard can change beyond recognition...",
+        "genre": "Action"
       },
       {
-        "title": "Воин великой тьмы",
-        "author": "Ник Перумов",
+        "title": "Warrior of the Great Darkness",
+        "author": "Nick Perumov",
         "img": "https://fantlab.ru/images/editions/big/297?r=1492543581",
         "year": 1995,
-        "desc": "Трогвар и Арьята — дети последнего короля Халлана, потерявшего престол в междоусобице — оказались разлучены; судьба забросила их в разные уголки мира Хьёрвард. Принц стал учеником мага, а его сестра скиталась по свету и лелеяла планы мести... Встретятся ли они? И если да — то как примут друг друга? И самое главное — сумеет ли кто-то из них отвоевать свой законный престол?",
-        "genre": "Боевик"
+        "desc": "Trogvar and Aryata - the children of the last king Hallan, who lost his throne in civil strife - were separated; fate threw them into different parts of the world of Hjorvard. The prince became a student of the magician, and his sister wandered around the world and cherished plans for revenge ... Will they meet? And if so, how will they accept each other, and most importantly, will any of them be able to win back their rightful throne?",
+        "genre": "Action"
       },
       {
-        "title": "Земля без радости",
-        "author": "Ник Перумов",
+        "title": "Land Without Joy",
+        "author": "Nick Perumov",
         "img": "https://fantlab.ru/images/editions/big/305?r=1492543878",
         "year": 1995,
-        "desc": "Бывший сотник Аргнист, а ныне — хозяин мирного хутора, вынужден, как и его соседи, то и дело отбивать нападения жутких тварей, именуемых «Ордой». На этом-то хуторе и сойдутся пути разных людей (и не-людей): гном Двалин, эльфийка Эльтара; таинственный некто по прозвищу Губитель, крутящийся поблизости.... Им — или их детям — рано или поздно придётся выяснять: кто напустил Орду на мирные земли Северного Хьёрварда? Зачем?.. А до этого сотник успеет побывать во главе повстанческой армии, эльфийка станет матерью и заплатит за это жуткую цену, гном подружится с более чем странной магичкой... Судьбы их переплетаются более чем причудливо, но все они (даже те, кто нелюдской расы) в душе всё равно остаются людьми. А значит — есть шанс на победу.",
-        "genre": "Боевик"
+        "desc": "The former centurion Argnist, and now the owner of a peaceful farm, is forced, like his neighbors, to repulse the attacks of terrible creatures called the Horde every now and then. On this farm, the paths of different people (and non-humans) will converge: a dwarf Dwalin, the elf Eltara, a mysterious someone called the Destroyer, circling nearby.... Sooner or later they - or their children - will have to find out: who let the Horde into the peaceful lands of Northern Hjorvard? rebel army, an elf will become a mother and pay a terrible price for it, a dwarf will make friends with a more than strange magician... Their destinies are intertwined more than bizarrely, but all of them (even those who are non-human races) still remain people in their souls. There is a chance to win.",
+        "genre": "Action"
       },
       {
-        "title": "Тим Талер, или Проданный смех",
-        "author": "Джеймс Крюс",
+        "title": "Tim Thaler, or Sold Laughter",
+        "author": "James Crews",
         "img": "https://fantlab.ru/images/editions/big/49201?r=1492544531",
         "year": 1962,
-        "desc": "В одной очень бедной семье жил мальчик Тим, но, несмотря на свою бедность, он был сказочно богат. Его богатством был смех. Весёлый, переливающийся, заразительных смех. Но Тим не знал о том, что это самое большое и главное богатство, он считал, что без денег счастья нет. И вот однажды человек, который представился другом его отца, предложил Тиму поменять свой смех на возможность выигрывать любые пари, даже самые безумные.",
-        "genre": "Сказка"
+        "desc": "The boy Tim lived in one very poor family, but, despite his poverty, he was fabulously rich. His wealth was laughter. Cheerful, iridescent, contagious laughter. But Tim did not know that this was the biggest and most important wealth, he believed that without money there is no happiness. And then one day a man who introduced himself as a friend of his father suggested that Tim change his laughter for the opportunity to win any bet, even the most insane.",
+        "genre": "Fairy tale"
       }
     ]
   }
+
+
+

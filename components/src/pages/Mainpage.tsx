@@ -1,16 +1,21 @@
 import ClassInput from "../components/ClassInput";
+import { ClassOneBook } from "../components/ClassOneBook";
 import * as objBooks from '../date.json';
+
+import { IOneBook } from "types/types";
 export const Mainpage = () => {
-  const books = objBooks.books;
-  console.log(books);
-  
+  const books: IOneBook[] = objBooks.books; 
   
     return (
-      <div>
+      <>
         <h1>Main Page</h1>
         <ClassInput/>
-        <p>Tets Oksana Kalinina @oksan4ik10</p>
-      </div>
+        <div className="cards">
+          {
+            books.map((item, index) => <ClassOneBook key = {index} {...item} />)
+          }
+        </div>
+      </>
     );
   };
   
