@@ -1,12 +1,13 @@
 import React, { ChangeEvent } from 'react';
-import { IOneBook } from 'types/types';
+import { IOneBook, IMyStatelikes} from 'types/types';
 
 import like from '../assets/like.svg'
 export class ClassOneBook extends React.Component {
-  state: IOneBook;
+  date: IOneBook;
+  state: IMyStatelikes
   constructor(props: Record<string, never>) {
     super(props);
-    this.state = {
+    this.date = {
       author: props.author,
       desc: props.desc,
       genre: props.genre,
@@ -14,36 +15,52 @@ export class ClassOneBook extends React.Component {
       title: props.title,
       year: props.year,
     };
+    this.state = {
+        date:"",
+        count: 10
+    }
+    this.changeState = this.changeState.bind(this);
+  }
+  changeState(){
+    if(!this.state.date){
+        this.setState({date: 'active',
+            count: this.state.count+1})
+    } else{
+        this.setState({date: '',
+            count: this.state.count-1
+        });
+    }
+
   }
 
   render() {
     return (
       <>
         <div className="card">
-          <img src={this.state.img} className="card__img" />
+          <img src={this.date.img} className="card__img" />
           <div className="card__info">
             <div className="card__head">
-              <h3 className="card__title">{this.state.title}</h3>
+              <h3 className="card__title">{this.date.title}</h3>
               <div className="card__year">
                 <span>Year: </span>
-                {this.state.year}
+                {this.date.year}
               </div>
             </div>
 
             <div className="card__author">
               <span>Author: </span>
-              {this.state.author}
+              {this.date.author}
             </div>
             <div className="card__genre">
               <span>Genre: </span>
-              {this.state.genre}
+              {this.date.genre}
             </div>
-            <div className="card__desc">{this.state.desc}</div>
-            <div className="card__likes">
-                <svg className="card__like">
+            <div className="card__desc">{this.date.desc}</div>
+            <div className="card__likes" onClick={this.changeState}>
+                <svg className={'card__like '+ this.state.date}>
                     <use xlinkHref="/like.svg#like"></use>
                 </svg>
-                <span>10</span>
+                <span>{this.state.count}</span>
             </div>
 
           </div>
