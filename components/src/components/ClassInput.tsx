@@ -18,7 +18,7 @@ class ClassInput extends React.Component {
   }
 
   render() {
-    return <input onInput={this.increment} value={this.state.date} />;
+    return <input onInput={this.increment} value={this.state.date} placeholder="Search..."/>;
   }
 }
 

@@ -8,7 +8,7 @@ export const Mainpage = () => {
 
   return (
     <>
-      <h1>Main Page</h1>
+      <h1>RS-Books</h1>
       <ClassInput />
       <div className="cards">
         {books.map((item, index) => (

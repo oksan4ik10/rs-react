@@ -1,6 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import { IOneBook } from 'types/types';
 
+import like from '../assets/like.svg'
 export class ClassOneBook extends React.Component {
   state: IOneBook;
   constructor(props: Record<string, never>) {
@@ -38,6 +39,13 @@ export class ClassOneBook extends React.Component {
               {this.state.genre}
             </div>
             <div className="card__desc">{this.state.desc}</div>
+            <div className="card__likes">
+                <svg className="card__like">
+                    <use xlinkHref="/like.svg#like"></use>
+                </svg>
+                <span>10</span>
+            </div>
+
           </div>
         </div>
       </>
