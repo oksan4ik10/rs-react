@@ -2,9 +2,9 @@ export interface MyStateInput {
   date: string;
 }
 
-export interface IMyStatelikes{
+export interface IMyStatelikes {
   date: string;
-  count: number
+  count: number;
 }
 
 export interface IOneBook {

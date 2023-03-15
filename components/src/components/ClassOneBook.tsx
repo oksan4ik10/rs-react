@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from 'react';
-import { IOneBook, IMyStatelikes} from 'types/types';
+import { IOneBook, IMyStatelikes } from 'types/types';
 
-import like from '../assets/like.svg'
+import like from '../assets/like.svg';
 export class ClassOneBook extends React.Component {
   date: IOneBook;
-  state: IMyStatelikes
+  state: IMyStatelikes;
   constructor(props: Record<string, never>) {
     super(props);
     this.date = {
@@ -16,21 +16,17 @@ export class ClassOneBook extends React.Component {
       year: props.year,
     };
     this.state = {
-        date:"",
-        count: 10
-    }
+      date: '',
+      count: 10,
+    };
     this.changeState = this.changeState.bind(this);
   }
-  changeState(){
-    if(!this.state.date){
-        this.setState({date: 'active',
-            count: this.state.count+1})
-    } else{
-        this.setState({date: '',
-            count: this.state.count-1
-        });
+  changeState() {
+    if (!this.state.date) {
+      this.setState({ date: 'active', count: this.state.count + 1 });
+    } else {
+      this.setState({ date: '', count: this.state.count - 1 });
     }
-
   }
 
   render() {
@@ -57,12 +53,11 @@ export class ClassOneBook extends React.Component {
             </div>
             <div className="card__desc">{this.date.desc}</div>
             <div className="card__likes" onClick={this.changeState}>
-                <svg className={'card__like '+ this.state.date}>
-                    <use xlinkHref="/like.svg#like"></use>
-                </svg>
-                <span>{this.state.count}</span>
+              <svg className={'card__like ' + this.state.date}>
+                <use xlinkHref="/like.svg#like"></use>
+              </svg>
+              <span>{this.state.count}</span>
             </div>
-
           </div>
         </div>
       </>

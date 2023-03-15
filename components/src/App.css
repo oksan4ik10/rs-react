@@ -18,90 +18,91 @@ footer {
   max-width: 1200px;
   margin: auto;
 }
-h1{
+h1 {
   text-align: center;
   font-size: 3rem;
   margin: 15px 0px;
 }
 
-input{
+input {
   width: 80%;
   margin: auto;
   padding: 7px;
   font-size: 1.2rem;
   border-radius: 10px;
-  border:2px solid #cb8383;
+  border: 2px solid #cb8383;
   display: block;
   margin-bottom: 10px;
-  transition: .2s;
+  transition: 0.2s;
 }
-input:focus{
+input:focus {
   border-color: #cbb1b1;
   outline: none;
 }
 
-.cards{
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap:20px;
+  gap: 20px;
   margin-bottom: 30px;
 }
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border:1px solid #d6bdbd;
+  border: 1px solid #d6bdbd;
   border-radius: 7px;
   cursor: pointer;
 }
-.card__img{
+.card__img {
   width: 100%;
   height: 200px;
   object-fit: contain;
-  background-color:#dac9c9a1;
+  background-color: #dac9c9a1;
   padding: 10px;
 }
-.card__info{
+.card__info {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap: 10px;
 }
-.card span{
+.card span {
   color: grey;
 }
 
-.card__head{
+.card__head {
   display: flex;
   justify-content: space-between;
 }
-.card__title{
+.card__title {
   overflow: hidden;
   max-width: 200px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.card__desc{
+.card__desc {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.card>svg{
+.card > svg {
   width: 20px;
 }
-.card__likes{
+.card__likes {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.card__like{
+.card__like {
   align-self: start;
   width: 20px;
   height: 20px;
-  fill:"black"; 
-  transition: .3s;
+  fill: 'black';
+  transition: 0.3s;
 }
-.card__like.active, .card__likes:hover{
-  fill: rgba(255, 0, 0, .5);
+.card__like.active,
+.card__likes:hover {
+  fill: rgba(255, 0, 0, 0.5);
 }
