@@ -1,10 +1,11 @@
-.App{
+.App {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
 }
-header, footer{
+header,
+footer {
   padding: 10px;
   background-color: bisque;
   display: flex;
@@ -13,7 +14,7 @@ header, footer{
   gap: 30px;
 }
 
-.container{
+.container {
   max-width: 1200px;
   margin: auto;
 }

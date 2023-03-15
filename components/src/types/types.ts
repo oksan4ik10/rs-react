@@ -1,12 +1,12 @@
 export interface MyStateInput {
-    date: string
+  date: string;
 }
 
 export interface IOneBook {
-    author: string;
-    desc: string;
-    genre: string;
-    img: string;
-    title: string;
-    year: number;
+  author: string;
+  desc: string;
+  genre: string;
+  img: string;
+  title: string;
+  year: number;
 }

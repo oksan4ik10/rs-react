@@ -1,4 +1,4 @@
-import {Routes, Route, Link} from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
 import './App.css';
 import React from 'react';
@@ -12,12 +12,11 @@ import { Layout } from './components/Layout';
 function App() {
   return (
     <div className="App">
-
       <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Mainpage/>}/>
-          <Route path="about" element={<About/>}/>
-          <Route path="*" element={<Notfound/>}/>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Mainpage />} />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<Notfound />} />
         </Route>
       </Routes>
       {/* <div>

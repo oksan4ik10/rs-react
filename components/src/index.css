@@ -1,14 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;;
+  font-family: 'Courier New', Courier, monospace;
 }
-a{
+a {
   text-decoration: none;
-  color:rgb(74, 47, 36);
+  color: rgb(74, 47, 36);
   font-weight: 600;
 }
-a.active{
-  color:rgb(151, 95, 73);
+a.active {
+  color: rgb(151, 95, 73);
 }
