@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
-import userEvent from "@testing-library/user-event";
+import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 
@@ -15,8 +15,7 @@ describe('App', () => {
         <Mainpage />
       </BrowserRouter>
     );
-    const items = await screen.findAllByRole('image')
-    expect(items).toHaveLength(51)
-
+    const items = await screen.findAllByRole('image');
+    expect(items).toHaveLength(51);
   });
-})
+});
