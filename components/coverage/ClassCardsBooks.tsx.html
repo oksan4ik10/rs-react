@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/ClassInput.tsx</title>
+    <title>Code coverage report for ClassCardsBooks.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> ClassInput.tsx</h1>
+        <h1><a href="index.html">All files</a> ClassCardsBooks.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/25</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/25</span>
+                <span class='fraction'>24/24</span>
             </div>
         
             
@@ -87,8 +87,7 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -102,10 +101,9 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">51x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -113,31 +111,30 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { ChangeEvent } from 'react';
-import { MyStateInput } from 'types/types';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import * as objBooks from '../date.json';
+import { ClassOneBook } from '../components/ClassOneBook';
 &nbsp;
-class ClassInput extends React.Component {
-  state: MyStateInput;
+import { IOneBook } from '../types/types';
+class ClassCardsBooks extends React.Component {
+    books:IOneBook[];
   constructor(props: Record&lt;string, never&gt;) {
     super(props);
-    const date = localStorage.getItem('date');
-    this.state = {
-      date: <span class="branch-0 cbranch-no" title="branch not covered" >date ? date : '</span>',
-    };
-    this.increment = this.increment.bind(this);
-  }
-<span class="fstat-no" title="function not covered" >  increment(e: ChangeEvent&lt;HTMLInputElement&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >    const value = e.target.value;</span>
-<span class="cstat-no" title="statement not covered" >    this.setState({ date: value });</span>
-<span class="cstat-no" title="statement not covered" >    localStorage.setItem('date', value);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+    this.books = objBooks.books;
 &nbsp;
+  }
   render() {
-    return &lt;input onInput={this.increment} value={this.state.date} placeholder="Search..." /&gt;;
+    return &lt;&gt;
+    &lt;div className="cards"&gt;
+        {this.books.map((item, index) =&gt; (
+          &lt;ClassOneBook key={index} {...item} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/&gt;
   }
 }
 &nbsp;
-export default ClassInput;
+export default ClassCardsBooks;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -145,16 +142,16 @@ export default ClassInput;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-17T16:52:49.633Z
+                at 2023-03-17T20:24:02.970Z
             </div>
-        <script src="../prettify.js"></script>
+        <script src="prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
     </body>
 </html>
     
