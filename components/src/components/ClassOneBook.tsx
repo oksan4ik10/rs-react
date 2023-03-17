@@ -53,7 +53,7 @@ export class ClassOneBook extends React.Component {
             </div>
             <div className="card__desc">{this.date.desc}</div>
             <div className="card__likes" onClick={this.changeState}>
-              <svg className={'card__like ' + this.state.date}>
+              <svg role="image" className={'card__like ' + this.state.date}>
                 <use xlinkHref="/like.svg#like"></use>
               </svg>
               <span>{this.state.count}</span>

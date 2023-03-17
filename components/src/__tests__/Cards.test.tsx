@@ -1,19 +1,22 @@
 import { BrowserRouter } from 'react-router-dom';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import userEvent from "@testing-library/user-event";
 
 import React from 'react';
 
 import '@testing-library/jest-dom';
 
-import App from '../App';
+import { Mainpage } from '../pages/Mainpage';
 
 describe('App', () => {
-  it('should', () => {
+  it('Cards in main: ', async () => {
     render(
       <BrowserRouter>
-        <App />
+        <Mainpage />
       </BrowserRouter>
     );
-    expect(screen.getByText(/RS-BOOK/gi)).toBeInTheDocument();
+    const items = await screen.findAllByRole('image')
+    expect(items).toHaveLength(51)
+
   });
 })
