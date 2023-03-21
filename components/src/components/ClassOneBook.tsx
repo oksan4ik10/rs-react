@@ -1,7 +1,6 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import { IOneBook, IMyStatelikes } from 'types/types';
 
-import like from '../assets/like.svg';
 export class ClassOneBook extends React.Component {
   date: IOneBook;
   state: IMyStatelikes;

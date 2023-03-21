@@ -4,7 +4,7 @@ export const Notfound = () => {
     <div>
       <h1>404</h1>
       <p>
-        This page doesn't exist. Go <Link to="/">home</Link>
+        This page does not exist. Go <Link to="/">home</Link>
       </p>
     </div>
   );

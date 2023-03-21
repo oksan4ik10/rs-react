@@ -1,5 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import reactLogo from './assets/react.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import React from 'react';
 
@@ -19,7 +18,6 @@ function App() {
           <Route path="*" element={<Notfound />} />
         </Route>
       </Routes>
-
     </div>
   );
 }
