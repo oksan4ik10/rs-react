@@ -19,6 +19,7 @@ export class Layout extends React.Component {
         <header onClick={this.changeRoute}>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
+          <NavLink to="/add">Add book</NavLink>
           <p>{this.state.date}</p>
         </header>
         <main className="container">
