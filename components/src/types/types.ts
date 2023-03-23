@@ -19,3 +19,8 @@ export interface IOneBook {
   title: string;
   year: number;
 }
+export interface IAddBook {
+  cards: {
+    books: IOneBook[];
+  };
+}

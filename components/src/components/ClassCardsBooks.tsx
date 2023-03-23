@@ -10,6 +10,9 @@ class ClassCardsBooks extends React.Component {
     this.books = props.books;
   }
   render() {
+    if (!this.books) {
+      return;
+    }
     return (
       <>
         <div className="cards">

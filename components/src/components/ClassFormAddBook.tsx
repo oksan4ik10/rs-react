@@ -1,6 +1,7 @@
-import React, { FormEvent, RefObject } from 'react';
+import React, { FormEvent, ReactComponentElement, RefObject } from 'react';
 import { ClassOptions } from './ClassOptions';
-import { IMyStatelikes } from '../types/types';
+import { IAddBook } from '../types/types';
+import ClassCardsBooks from './ClassCardsBooks';
 
 export class ClassFormAddBook extends React.Component {
   title: RefObject<HTMLInputElement>;
@@ -14,7 +15,7 @@ export class ClassFormAddBook extends React.Component {
   fileInput: RefObject<HTMLInputElement>;
   desc: RefObject<HTMLTextAreaElement>;
   images: string[];
-  state: IMyStatelikes;
+  state: IAddBook;
   constructor(props: Record<string, never>) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,28 +33,47 @@ export class ClassFormAddBook extends React.Component {
     this.images = [];
 
     this.state = {
-      date: '',
-      count: 10,
+      cards: {
+        books: [],
+      },
     };
   }
 
   handleSubmit(event: FormEvent) {
     event.preventDefault();
-    console.log(this.desc.current?.value);
-    const radio = this.radioRefDetective.current?.checked
+    const desc = this.desc.current?.value;
+    const title = this.title.current?.value;
+    const year = this.year.current?.value;
+
+    const author = this.selectRef.current?.value;
+    const genre = this.radioRefDetective.current?.checked
       ? this.radioRefDetective.current.value
       : this.radioRefFantasy.current?.checked
       ? this.radioRefFantasy.current.value
       : this.radioRefHorror.current?.checked
       ? this.radioRefHorror.current.value
       : this.radioRefOther.current?.value;
-    console.log(radio);
+
     const check = this.check.current?.checked;
     if (this.fileInput.current) {
       if (this.fileInput.current.files) {
         const selecteds = this.fileInput.current.files[0];
-        this.images.push(URL.createObjectURL(selecteds));
-        this.setState({ date: this.images[0] });
+        if (year && author && desc && title && genre) {
+          const numYear = Number(year.split('-')[0]);
+          const newBook = {
+            author: author,
+            desc: desc,
+            title: title,
+            genre: genre,
+            year: numYear,
+            img: URL.createObjectURL(selecteds),
+          };
+          console.log(this.state.cards.books);
+          this.state.cards.books.push(newBook);
+          this.setState({ cards: this.state.cards });
+        }
+
+        this.images.push();
       }
     }
   }
@@ -115,7 +135,8 @@ export class ClassFormAddBook extends React.Component {
 
           <input type="submit" value="Create card" />
         </form>
-        <img src={this.state.date} style={{ width: 300 }} />
+        {/* <img src={this.state.date} style={{ width: 300 }} /> */}
+        <ClassCardsBooks {...this.state.cards} />
       </>
     );
   }
