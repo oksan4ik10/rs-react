@@ -18,6 +18,7 @@ export interface IOneBook {
   img: string;
   title: string;
   year: number;
+  check?: boolean;
 }
 export interface IAddBook {
   cards: {

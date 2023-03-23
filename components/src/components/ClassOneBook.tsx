@@ -13,11 +13,18 @@ export class ClassOneBook extends React.Component {
       img: props.img,
       title: props.title,
       year: props.year,
+      check: props.check,
     };
     this.state = {
       date: '',
       count: 10,
     };
+    if (this.date.check) {
+      this.state = {
+        date: 'active',
+        count: 11,
+      };
+    }
     this.changeState = this.changeState.bind(this);
   }
   changeState() {

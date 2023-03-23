@@ -1,4 +1,4 @@
-import React, { FormEvent, ReactComponentElement, RefObject } from 'react';
+import React, { FormEvent, RefObject } from 'react';
 import { ClassOptions } from './ClassOptions';
 import { IAddBook } from '../types/types';
 import ClassCardsBooks from './ClassCardsBooks';
@@ -67,6 +67,7 @@ export class ClassFormAddBook extends React.Component {
             genre: genre,
             year: numYear,
             img: URL.createObjectURL(selecteds),
+            check: check,
           };
           console.log(this.state.cards.books);
           this.state.cards.books.push(newBook);
@@ -135,7 +136,6 @@ export class ClassFormAddBook extends React.Component {
 
           <input type="submit" value="Create card" />
         </form>
-        {/* <img src={this.state.date} style={{ width: 300 }} /> */}
         <ClassCardsBooks {...this.state.cards} />
       </>
     );
