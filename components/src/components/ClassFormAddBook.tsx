@@ -12,12 +12,14 @@ export class ClassFormAddBook extends React.Component {
   radioRefOther: RefObject<HTMLInputElement>;
   check: RefObject<HTMLInputElement>;
   fileInput: RefObject<HTMLInputElement>;
+  desc: RefObject<HTMLTextAreaElement>;
   images: string[];
   state: IMyStatelikes;
   constructor(props: Record<string, never>) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.title = React.createRef();
+    this.desc = React.createRef();
     this.year = React.createRef();
     this.selectRef = React.createRef();
     this.radioRefHorror = React.createRef();
@@ -25,6 +27,7 @@ export class ClassFormAddBook extends React.Component {
     this.radioRefDetective = React.createRef();
     this.radioRefOther = React.createRef();
     this.check = React.createRef();
+
     this.fileInput = React.createRef();
     this.images = [];
 
@@ -36,7 +39,7 @@ export class ClassFormAddBook extends React.Component {
 
   handleSubmit(event: FormEvent) {
     event.preventDefault();
-    console.log();
+    console.log(this.desc.current?.value);
     const radio = this.radioRefDetective.current?.checked
       ? this.radioRefDetective.current.value
       : this.radioRefFantasy.current?.checked
@@ -62,6 +65,10 @@ export class ClassFormAddBook extends React.Component {
           <label>
             Title:
             <input type="text" ref={this.title} />
+          </label>
+          <label>
+            Desc:
+            <textarea ref={this.desc} />
           </label>
           <label>
             Year:
