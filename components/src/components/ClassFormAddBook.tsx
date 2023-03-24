@@ -46,13 +46,21 @@ export class ClassFormAddBook extends React.Component {
     const year = this.year.current?.value;
 
     const author = this.selectRef.current?.value;
-    const genre = this.radioRefDetective.current?.checked
-      ? this.radioRefDetective.current.value
-      : this.radioRefFantasy.current?.checked
-      ? this.radioRefFantasy.current.value
-      : this.radioRefHorror.current?.checked
-      ? this.radioRefHorror.current.value
-      : this.radioRefOther.current?.value;
+    let genre = '';
+    genre = this.radioRefDetective.current?.checked
+      ? genre + this.radioRefDetective.current.value + ','
+      : genre;
+    genre = this.radioRefFantasy.current?.checked
+      ? genre + this.radioRefFantasy.current.value + ','
+      : genre;
+    genre = this.radioRefHorror.current?.checked
+      ? genre + this.radioRefHorror.current.value + ','
+      : genre;
+    genre = this.radioRefOther.current?.checked
+      ? genre + this.radioRefOther.current?.value + ','
+      : genre;
+
+    if (genre) genre = genre.slice(0, genre.length - 1);
 
     const check = this.check.current?.checked;
     if (this.fileInput.current) {
@@ -69,7 +77,6 @@ export class ClassFormAddBook extends React.Component {
             img: URL.createObjectURL(selecteds),
             check: check,
           };
-          console.log(this.state.cards.books);
           this.state.cards.books.push(newBook);
           this.setState({ cards: this.state.cards });
         }
@@ -91,6 +98,7 @@ export class ClassFormAddBook extends React.Component {
             Desc:
             <textarea ref={this.desc} />
           </label>
+          <br />
           <label>
             Year:
             <input type="date" ref={this.year} />
@@ -103,25 +111,19 @@ export class ClassFormAddBook extends React.Component {
           <p>
             <label>
               Horror
-              <input type="radio" ref={this.radioRefHorror} name="radio" value="Horror" />
+              <input type="checkbox" ref={this.radioRefHorror} name="radio" value="Horror" />
             </label>
             <label>
               Fantasy
-              <input type="radio" ref={this.radioRefFantasy} name="radio" value="Fantasy" />
+              <input type="checkbox" ref={this.radioRefFantasy} name="radio" value="Fantasy" />
             </label>
             <label>
               Detective
-              <input type="radio" ref={this.radioRefDetective} name="radio" value="Detective" />
+              <input type="checkbox" ref={this.radioRefDetective} name="radio" value="Detective" />
             </label>
             <label>
               Other
-              <input
-                defaultChecked
-                type="radio"
-                ref={this.radioRefOther}
-                name="radio"
-                value="Other"
-              />
+              <input type="checkbox" ref={this.radioRefOther} name="radio" value="Other" />
             </label>
           </p>
 
