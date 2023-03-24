@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, RefObject } from 'react';
 import { ClassOptions } from './ClassOptions';
-import { IAddBook } from '../types/types';
+import { IAddBook, IChangeElement } from '../types/types';
 import ClassCardsBooks from './ClassCardsBooks';
 
 export class ClassFormAddBook extends React.Component {
@@ -11,7 +11,9 @@ export class ClassFormAddBook extends React.Component {
   radioRefFantasy: RefObject<HTMLInputElement>;
   radioRefDetective: RefObject<HTMLInputElement>;
   radioRefOther: RefObject<HTMLInputElement>;
-  check: RefObject<HTMLInputElement>;
+  checkYes: RefObject<HTMLInputElement>;
+  checkNo: RefObject<HTMLInputElement>;
+
   fileInput: RefObject<HTMLInputElement>;
   desc: RefObject<HTMLTextAreaElement>;
   state: IAddBook;
@@ -27,8 +29,8 @@ export class ClassFormAddBook extends React.Component {
     this.radioRefFantasy = React.createRef();
     this.radioRefDetective = React.createRef();
     this.radioRefOther = React.createRef();
-    this.check = React.createRef();
-
+    this.checkYes = React.createRef();
+    this.checkNo = React.createRef();
     this.fileInput = React.createRef();
 
     this.state = {
@@ -41,11 +43,9 @@ export class ClassFormAddBook extends React.Component {
       errorAuthor: '',
       errorGenre: '',
       errorFile: '',
+      errorCheck: '',
     };
-    this.changeTitle = this.changeTitle.bind(this);
-    this.changeDesc = this.changeDesc.bind(this);
-    this.changeYear = this.changeYear.bind(this);
-    this.changeAuthor = this.changeAuthor.bind(this);
+    this.change = this.change.bind(this);
     this.submitForm = true;
   }
   errorTitle(str: string | undefined) {
@@ -61,12 +61,6 @@ export class ClassFormAddBook extends React.Component {
       this.setState({ errorTitle: `Title field is empty` });
     }
   }
-  changeTitle(event: ChangeEvent<HTMLInputElement>) {
-    if (this.submitForm) return;
-    const target = event.target as HTMLInputElement;
-    const title = target.value;
-    this.errorTitle(title);
-  }
   errorDesc(str: string | undefined) {
     if (str) {
       if (str.length < 10) {
@@ -81,12 +75,6 @@ export class ClassFormAddBook extends React.Component {
     }
   }
 
-  changeDesc(event: ChangeEvent<HTMLTextAreaElement>) {
-    if (this.submitForm) return;
-    const target = event.target as HTMLTextAreaElement;
-    const desc = target.value;
-    this.errorDesc(desc);
-  }
   errorYear(str: string | undefined) {
     if (str) {
       const numYear = Number(str.split('-')[0]);
@@ -98,12 +86,6 @@ export class ClassFormAddBook extends React.Component {
       this.setState({ errorYear: `Date field is empty` });
     }
   }
-  changeYear(event: ChangeEvent<HTMLInputElement>) {
-    if (this.submitForm) return;
-    const target = event.target as HTMLInputElement;
-    const year = target.value;
-    this.errorYear(year);
-  }
   errorAuthor(str: string | undefined) {
     if (str === 'Change author') {
       this.setState({ errorAuthor: `Choose an author` });
@@ -111,12 +93,48 @@ export class ClassFormAddBook extends React.Component {
       this.setState({ errorAuthor: `` });
     }
   }
-  changeAuthor(event: ChangeEvent<HTMLSelectElement>) {
-    if (this.submitForm) return;
-    const target = event.target as HTMLSelectElement;
-    const author = target.value;
-    this.errorAuthor(author);
+  errorRadio() {
+    if (
+      this.radioRefDetective.current?.checked ||
+      this.radioRefFantasy.current?.checked ||
+      this.radioRefOther.current?.checked ||
+      this.radioRefHorror.current?.checked
+    ) {
+      this.setState({ errorGenre: '' });
+    } else this.setState({ errorGenre: 'Please select at least one genre' });
   }
+  errorCheck() {
+    if (this.checkYes.current?.checked || this.checkNo.current?.checked)
+      this.setState({ errorCheck: '' });
+    else this.setState({ errorCheck: 'Please select Yes/No' });
+  }
+  errorFile(str: string | undefined) {
+    if (str) {
+      const arrValue = str.split('.');
+      const exp = arrValue[arrValue.length - 1].toLocaleLowerCase();
+      if (exp === 'png' || exp === 'jpg' || exp === 'jpeg' || exp === 'svg' || exp === 'gif') {
+        this.setState({ errorFile: '' });
+      } else {
+        this.setState({ errorFile: 'Extension is not .jpg, .png, .gif, .svg' });
+      }
+    } else {
+      this.setState({ errorFile: 'File not selected' });
+    }
+  }
+  change(event: ChangeEvent<IChangeElement>) {
+    if (this.submitForm) return;
+    const target = event.target as IChangeElement;
+    const value = target.value;
+    const name = target.name;
+    if (name === 'title') this.errorTitle(value);
+    else if (name === 'author') this.errorAuthor(value);
+    else if (name === 'year') this.errorYear(value);
+    else if (name === 'desc') this.errorDesc(value);
+    else if (name === 'radio') this.errorRadio();
+    else if (name === 'check') this.errorCheck();
+    else if (name === 'file') this.errorFile(value);
+  }
+
   handleSubmit(event: FormEvent) {
     event.preventDefault();
     this.submitForm = false;
@@ -124,8 +142,23 @@ export class ClassFormAddBook extends React.Component {
     const desc = this.desc.current?.value;
     const title = this.title.current?.value;
     const year = this.year.current?.value;
-
+    const file = this.fileInput.current?.value;
     const author = this.selectRef.current?.value;
+    //validation
+    this.errorTitle(title);
+    this.errorDesc(desc);
+    this.errorYear(year);
+    this.errorAuthor(author);
+    this.errorRadio();
+    this.errorCheck();
+    this.errorFile(file);
+
+    for (const key in this.state) {
+      const t = key as keyof IAddBook;
+      if (key === 'cards') continue;
+      if (this.state[t]) return;
+    }
+
     let genre = '';
     genre = this.radioRefDetective.current?.checked
       ? genre + this.radioRefDetective.current.value + ','
@@ -142,13 +175,11 @@ export class ClassFormAddBook extends React.Component {
 
     if (genre) genre = genre.slice(0, genre.length - 1);
 
-    //validation
-    this.errorTitle(title);
-    this.errorDesc(desc);
-    this.errorYear(year);
-    this.errorAuthor(author);
-
-    const check = this.check.current?.checked;
+    const check = this.checkYes.current?.checked
+      ? true
+      : this.checkNo.current?.checked
+      ? false
+      : undefined;
     if (this.fileInput.current) {
       if (this.fileInput.current.files) {
         const selecteds = this.fileInput.current.files[0];
@@ -176,22 +207,22 @@ export class ClassFormAddBook extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Title
-            <input type="text" ref={this.title} onChange={this.changeTitle} />
+            <input type="text" name="title" ref={this.title} onChange={this.change} />
             <span className="error">{this.state.errorTitle}</span>
           </label>
           <label>
             Desc
-            <textarea ref={this.desc} onChange={this.changeDesc} />
+            <textarea ref={this.desc} name="desc" onChange={this.change} />
             <span className="error">{this.state.errorDesc}</span>
           </label>
           <br />
           <label>
             Year:
-            <input type="date" ref={this.year} onChange={this.changeYear} />
+            <input type="date" name="year" ref={this.year} onChange={this.change} />
             <span className="error">{this.state.errorYear}</span>
           </label>
           <span>Author</span>
-          <select ref={this.selectRef} onChange={this.changeAuthor}>
+          <select ref={this.selectRef} name="author" onChange={this.change}>
             <ClassOptions />
           </select>
           <span className="error">{this.state.errorAuthor}</span>
@@ -199,30 +230,80 @@ export class ClassFormAddBook extends React.Component {
           <p>
             <label>
               Horror
-              <input type="checkbox" ref={this.radioRefHorror} name="radio" value="Horror" />
+              <input
+                type="checkbox"
+                ref={this.radioRefHorror}
+                name="radio"
+                value="Horror"
+                onChange={this.change}
+              />
             </label>
             <label>
               Fantasy
-              <input type="checkbox" ref={this.radioRefFantasy} name="radio" value="Fantasy" />
+              <input
+                type="checkbox"
+                ref={this.radioRefFantasy}
+                name="radio"
+                value="Fantasy"
+                onChange={this.change}
+              />
             </label>
             <label>
               Detective
-              <input type="checkbox" ref={this.radioRefDetective} name="radio" value="Detective" />
+              <input
+                type="checkbox"
+                ref={this.radioRefDetective}
+                name="radio"
+                value="Detective"
+                onChange={this.change}
+              />
             </label>
             <label>
               Other
-              <input type="checkbox" ref={this.radioRefOther} name="radio" value="Other" />
+              <input
+                type="checkbox"
+                ref={this.radioRefOther}
+                name="radio"
+                value="Other"
+                onChange={this.change}
+              />
             </label>
             <span className="error">{this.state.errorGenre}</span>
           </p>
 
           <p>
             Like
-            <input type="checkbox" ref={this.check} />
+            <label>
+              Yes{' '}
+              <input
+                type="radio"
+                ref={this.checkYes}
+                name="check"
+                value="Yes"
+                onChange={this.change}
+              />
+            </label>
+            <label>
+              No{' '}
+              <input
+                type="radio"
+                ref={this.checkNo}
+                name="check"
+                value="No"
+                onChange={this.change}
+              />
+            </label>
+            <span className="error">{this.state.errorCheck}</span>
           </p>
           <label>
             Upload file:
-            <input type="file" ref={this.fileInput} accept="image/*" />
+            <input
+              type="file"
+              ref={this.fileInput}
+              accept="image/*"
+              name="file"
+              onChange={this.change}
+            />
             <span className="error">{this.state.errorFile}</span>
           </label>
 

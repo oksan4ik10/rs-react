@@ -30,4 +30,6 @@ export interface IAddBook {
   errorAuthor: string;
   errorGenre: string;
   errorFile: string;
+  errorCheck: string;
 }
+export type IChangeElement = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
