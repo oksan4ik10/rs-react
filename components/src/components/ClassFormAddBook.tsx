@@ -44,6 +44,8 @@ export class ClassFormAddBook extends React.Component {
     };
     this.changeTitle = this.changeTitle.bind(this);
     this.changeDesc = this.changeDesc.bind(this);
+    this.changeYear = this.changeYear.bind(this);
+    this.changeAuthor = this.changeAuthor.bind(this);
     this.submitForm = true;
   }
   errorTitle(str: string | undefined) {
@@ -85,7 +87,36 @@ export class ClassFormAddBook extends React.Component {
     const desc = target.value;
     this.errorDesc(desc);
   }
-
+  errorYear(str: string | undefined) {
+    if (str) {
+      const numYear = Number(str.split('-')[0]);
+      const yearNow = new Date().getFullYear();
+      if (numYear > yearNow) {
+        this.setState({ errorYear: `Year selected incorrectly` });
+      } else this.setState({ errorYear: '' });
+    } else {
+      this.setState({ errorYear: `Date field is empty` });
+    }
+  }
+  changeYear(event: ChangeEvent<HTMLInputElement>) {
+    if (this.submitForm) return;
+    const target = event.target as HTMLInputElement;
+    const year = target.value;
+    this.errorYear(year);
+  }
+  errorAuthor(str: string | undefined) {
+    if (str === 'Change author') {
+      this.setState({ errorAuthor: `Choose an author` });
+    } else {
+      this.setState({ errorAuthor: `` });
+    }
+  }
+  changeAuthor(event: ChangeEvent<HTMLSelectElement>) {
+    if (this.submitForm) return;
+    const target = event.target as HTMLSelectElement;
+    const author = target.value;
+    this.errorAuthor(author);
+  }
   handleSubmit(event: FormEvent) {
     event.preventDefault();
     this.submitForm = false;
@@ -114,6 +145,8 @@ export class ClassFormAddBook extends React.Component {
     //validation
     this.errorTitle(title);
     this.errorDesc(desc);
+    this.errorYear(year);
+    this.errorAuthor(author);
 
     const check = this.check.current?.checked;
     if (this.fileInput.current) {
@@ -154,11 +187,11 @@ export class ClassFormAddBook extends React.Component {
           <br />
           <label>
             Year:
-            <input type="date" ref={this.year} />
+            <input type="date" ref={this.year} onChange={this.changeYear} />
             <span className="error">{this.state.errorYear}</span>
           </label>
           <span>Author</span>
-          <select ref={this.selectRef}>
+          <select ref={this.selectRef} onChange={this.changeAuthor}>
             <ClassOptions />
           </select>
           <span className="error">{this.state.errorAuthor}</span>
