@@ -64,7 +64,7 @@ export class ClassFormAddBook extends React.Component {
   errorDesc(str: string | undefined) {
     if (str) {
       if (str.length < 10) {
-        this.setState({ errorDesc: `Length title < 10` });
+        this.setState({ errorDesc: `Length desc < 10` });
       } else {
         if (str[0].toUpperCase() !== str[0]) {
           this.setState({ errorDesc: `Desc must start with a capital letter` });
@@ -207,30 +207,39 @@ export class ClassFormAddBook extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Title
-            <input type="text" name="title" ref={this.title} onChange={this.change} />
-            <span className="error">{this.state.errorTitle}</span>
+            <input type="text" name="title" role="title" ref={this.title} onChange={this.change} />
+            <span className="error" role="errorTitle">
+              {this.state.errorTitle}
+            </span>
           </label>
           <label>
             Desc
-            <textarea ref={this.desc} name="desc" onChange={this.change} />
-            <span className="error">{this.state.errorDesc}</span>
+            <textarea ref={this.desc} name="desc" role="desc" onChange={this.change} />
+            <span className="error" role="errorDesc">
+              {this.state.errorDesc}
+            </span>
           </label>
           <br />
           <label>
             Year:
-            <input type="date" name="year" ref={this.year} onChange={this.change} />
-            <span className="error">{this.state.errorYear}</span>
+            <input type="date" name="year" ref={this.year} role="year" onChange={this.change} />
+            <span className="error" role="errorYear">
+              {this.state.errorYear}
+            </span>
           </label>
           <span>Author</span>
-          <select ref={this.selectRef} name="author" onChange={this.change}>
+          <select ref={this.selectRef} name="author" role="author" onChange={this.change}>
             <ClassOptions />
           </select>
-          <span className="error">{this.state.errorAuthor}</span>
+          <span className="error" role="errorAuthor">
+            {this.state.errorAuthor}
+          </span>
           <h4>Genre</h4>
           <p>
             <label>
               Horror
               <input
+                role="genre"
                 type="checkbox"
                 ref={this.radioRefHorror}
                 name="radio"
@@ -268,7 +277,9 @@ export class ClassFormAddBook extends React.Component {
                 onChange={this.change}
               />
             </label>
-            <span className="error">{this.state.errorGenre}</span>
+            <span className="error" role="errorGenre">
+              {this.state.errorGenre}
+            </span>
           </p>
 
           <p>

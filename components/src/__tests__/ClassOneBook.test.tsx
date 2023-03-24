@@ -1,18 +1,34 @@
 import { BrowserRouter } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import { IOneBook } from 'types/types';
 
 import '@testing-library/jest-dom';
 
-import ClassCardsBooks from '../components/ClassCardsBooks';
+import { ClassOneBook } from '../components/ClassOneBook';
 
-describe('App', () => {
-  it('Cards in main: ', async () => {
-    render(
+describe('ClassOneBook', () => {
+  const item: IOneBook = {
+    author: 'test',
+    desc: 'test',
+    genre: 'test',
+    img: 'test',
+    title: 'test',
+    year: 2023,
+    check: false,
+  };
+  it('Click like in book: ', async () => {
+    const { container } = render(
       <BrowserRouter>
-        <ClassCardsBooks />
+        <ClassOneBook {...item} />
       </BrowserRouter>
     );
-    const items = await screen.findAllByRole('image');
-    expect(items).toHaveLength(51);
+    const foo = container.querySelector('.card__likes');
+
+    if (foo) {
+      fireEvent.click(foo);
+      expect(screen.getByRole('image')).toHaveClass('active');
+      fireEvent.click(foo);
+      expect(screen.getByRole('image')).not.toHaveClass('active');
+    }
   });
 });

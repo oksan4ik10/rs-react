@@ -1,26 +1,28 @@
 import { BrowserRouter } from 'react-router-dom';
-import { render, fireEvent, screen } from '@testing-library/react';
-
-import React from 'react';
+import { render, screen } from '@testing-library/react';
+import * as objBooks from '../date.json';
 
 import '@testing-library/jest-dom';
 
-import { ClassOneBook } from '../components/ClassOneBook';
+import ClassCardsBooks from '../components/ClassCardsBooks';
 
-describe('ClassOneBook', () => {
-  it('Click like in book: ', () => {
-    const { container } = render(
+describe('App', () => {
+  it('Cards in main: ', async () => {
+    render(
       <BrowserRouter>
-        <ClassOneBook />
+        <ClassCardsBooks {...objBooks} />
       </BrowserRouter>
     );
-    const foo = container.querySelector('.card__likes');
-
-    if (foo) {
-      fireEvent.click(foo);
-      expect(screen.getByRole('image')).toHaveClass('active');
-      fireEvent.click(foo);
-      expect(screen.getByRole('image')).not.toHaveClass('active');
-    }
+    const items = await screen.findAllByRole('image');
+    expect(items).toHaveLength(51);
+  });
+  it('Cards empty: ', async () => {
+    const { container } = render(
+      <BrowserRouter>
+        <ClassCardsBooks />
+      </BrowserRouter>
+    );
+    const foo = container.querySelector('.cards');
+    expect(container).toBeEmptyDOMElement();
   });
 });
