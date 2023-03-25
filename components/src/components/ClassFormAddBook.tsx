@@ -3,6 +3,8 @@ import { ClassOptions } from './ClassOptions';
 import { IAddBook, IChangeElement } from '../types/types';
 import ClassCardsBooks from './ClassCardsBooks';
 
+import classes from '../styles/ClassFormAddBook.module.css';
+
 export class ClassFormAddBook extends React.Component {
   title: RefObject<HTMLInputElement>;
   year: RefObject<HTMLInputElement>;
@@ -167,6 +169,12 @@ export class ClassFormAddBook extends React.Component {
       this.errorRadio();
       this.errorCheck();
       this.errorFile(file);
+      let selecteds: File;
+      if (this.fileInput.current.files) {
+        selecteds = this.fileInput.current.files[0];
+        if (selecteds.size > 5 * 1024 * 1024)
+          this.setState({ errorFile: 'The file must be no larger than 5 MB' });
+      } else return;
 
       for (const key in this.state) {
         const t = key as keyof IAddBook;
@@ -196,37 +204,34 @@ export class ClassFormAddBook extends React.Component {
         ? false
         : undefined;
 
-      if (this.fileInput.current.files) {
-        const selecteds = this.fileInput.current.files[0];
-        if (year && author && desc && title && genre && error) {
-          const numYear = Number(year.split('-')[0]);
-          const newBook = {
-            author: author,
-            desc: desc,
-            title: title,
-            genre: genre,
-            year: numYear,
-            img: URL.createObjectURL(selecteds),
-            check: check,
-          };
-          this.state.cards.books.push(newBook);
-          this.setState({ cards: this.state.cards });
-          this.title.current.value = '';
-          this.desc.current.value = '';
-          this.title.current.value = '';
-          this.year.current.value = '';
-          this.fileInput.current.value = '';
-          this.selectRef.current.value = '';
-          this.radioRefHorror.current.value = '';
-          this.radioRefFantasy.current.value = '';
-          this.radioRefDetective.current.value = '';
-          this.radioRefOther.current.value = '';
-          this.checkYes.current.value = '';
-          this.checkNo.current.value = '';
-          this.fileInput.current.value = '';
-          this.setState({ message: 'Book created!' });
-          setTimeout(() => this.setState({ message: '' }), 4000);
-        }
+      if (year && author && desc && title && genre && error) {
+        const numYear = Number(year.split('-')[0]);
+        const newBook = {
+          author: author,
+          desc: desc,
+          title: title,
+          genre: genre,
+          year: numYear,
+          img: URL.createObjectURL(selecteds),
+          check: check,
+        };
+        this.state.cards.books.push(newBook);
+        this.setState({ cards: this.state.cards });
+        this.title.current.value = '';
+        this.desc.current.value = '';
+        this.title.current.value = '';
+        this.year.current.value = '';
+        this.fileInput.current.value = '';
+        this.selectRef.current.value = '';
+        this.radioRefHorror.current.checked = false;
+        this.radioRefFantasy.current.checked = false;
+        this.radioRefDetective.current.checked = false;
+        this.radioRefOther.current.checked = false;
+        this.checkYes.current.checked = false;
+        this.checkNo.current.checked = false;
+        this.fileInput.current.value = '';
+        this.setState({ message: 'Book created!' });
+        setTimeout(() => this.setState({ message: '' }), 4000);
       }
     }
   }
@@ -234,111 +239,133 @@ export class ClassFormAddBook extends React.Component {
   render() {
     return (
       <>
-        <h3>{this.state.message}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>
+        <form className={classes.forms} onSubmit={this.handleSubmit}>
+          <label className={classes.label}>
             Title
             <input type="text" name="title" role="title" ref={this.title} onChange={this.change} />
-            <span className="error" role="errorTitle">
+            <span className={classes.error} role="errorTitle">
               {this.state.errorTitle}
             </span>
           </label>
-          <label>
+          <label className={classes.label}>
             Desc
-            <textarea ref={this.desc} name="desc" role="desc" onChange={this.change} />
-            <span className="error" role="errorDesc">
+            <textarea
+              className={classes.textarea}
+              ref={this.desc}
+              name="desc"
+              role="desc"
+              onChange={this.change}
+              rows={5}
+            />
+            <span role="errorDesc" className={classes.error}>
               {this.state.errorDesc}
             </span>
           </label>
-          <br />
-          <label>
-            Year:
+          <label className={classes.label}>
+            Year
             <input type="date" name="year" ref={this.year} role="year" onChange={this.change} />
-            <span className="error" role="errorYear">
+            <span className={classes.error} role="errorYear">
               {this.state.errorYear}
             </span>
           </label>
-          <span>Author</span>
-          <select ref={this.selectRef} name="author" role="author" onChange={this.change}>
-            <ClassOptions />
-          </select>
-          <span className="error" role="errorAuthor">
-            {this.state.errorAuthor}
-          </span>
-          <h4>Genre</h4>
-          <p>
-            <label>
-              Horror
-              <input
-                role="genre"
-                type="checkbox"
-                ref={this.radioRefHorror}
-                name="radio"
-                value="Horror"
-                onChange={this.change}
-              />
-            </label>
-            <label>
-              Fantasy
-              <input
-                type="checkbox"
-                ref={this.radioRefFantasy}
-                name="radio"
-                value="Fantasy"
-                onChange={this.change}
-              />
-            </label>
-            <label>
-              Detective
-              <input
-                type="checkbox"
-                ref={this.radioRefDetective}
-                name="radio"
-                value="Detective"
-                onChange={this.change}
-              />
-            </label>
-            <label>
-              Other
-              <input
-                type="checkbox"
-                ref={this.radioRefOther}
-                name="radio"
-                value="Other"
-                onChange={this.change}
-              />
-            </label>
-            <span className="error" role="errorGenre">
+          <label className={classes.label}>
+            <span>Author</span>
+            <select
+              ref={this.selectRef}
+              name="author"
+              role="author"
+              onChange={this.change}
+              className={classes.select}
+            >
+              <ClassOptions />
+            </select>
+            <span className={classes.error} role="errorAuthor">
+              {this.state.errorAuthor}
+            </span>
+          </label>
+
+          <div className={classes.label}>
+            Genre
+            <div className={classes.checkbox}>
+              <label>
+                Horror
+                <input
+                  className={classes.custom}
+                  role="genre"
+                  type="checkbox"
+                  ref={this.radioRefHorror}
+                  name="radio"
+                  value="Horror"
+                  onChange={this.change}
+                />
+              </label>
+              <label>
+                Fantasy
+                <input
+                  className={classes.custom}
+                  type="checkbox"
+                  ref={this.radioRefFantasy}
+                  name="radio"
+                  value="Fantasy"
+                  onChange={this.change}
+                />
+              </label>
+              <label>
+                Detective
+                <input
+                  className={classes.custom}
+                  type="checkbox"
+                  ref={this.radioRefDetective}
+                  name="radio"
+                  value="Detective"
+                  onChange={this.change}
+                />
+              </label>
+              <label>
+                Other
+                <input
+                  className={classes.custom}
+                  type="checkbox"
+                  ref={this.radioRefOther}
+                  name="radio"
+                  value="Other"
+                  onChange={this.change}
+                />
+              </label>
+            </div>
+            <span className={classes.error} role="errorGenre">
               {this.state.errorGenre}
             </span>
-          </p>
+          </div>
 
-          <p>
+          <div className={classes.label}>
             Like
-            <label>
-              Yes{' '}
-              <input
-                type="radio"
-                ref={this.checkYes}
-                name="check"
-                value="Yes"
-                onChange={this.change}
-              />
-            </label>
-            <label>
-              No{' '}
-              <input
-                type="radio"
-                ref={this.checkNo}
-                name="check"
-                value="No"
-                onChange={this.change}
-              />
-            </label>
-            <span className="error">{this.state.errorCheck}</span>
-          </p>
-          <label>
-            Upload file:
+            <div className={classes.radio}>
+              <label>
+                Yes{' '}
+                <input
+                  type="radio"
+                  ref={this.checkYes}
+                  name="check"
+                  value="Yes"
+                  onChange={this.change}
+                />
+              </label>
+              <label>
+                No{' '}
+                <input
+                  type="radio"
+                  ref={this.checkNo}
+                  name="check"
+                  value="No"
+                  onChange={this.change}
+                />
+              </label>
+            </div>
+            <span className={classes.error}>{this.state.errorCheck}</span>
+          </div>
+          <label className={classes.label}>
+            Upload
             <input
               type="file"
               ref={this.fileInput}
@@ -346,11 +373,12 @@ export class ClassFormAddBook extends React.Component {
               name="file"
               onChange={this.change}
             />
-            <span className="error">{this.state.errorFile}</span>
+            <span className={classes.error}>{this.state.errorFile}</span>
           </label>
 
           <input type="submit" value="Create card" />
         </form>
+        <h3 className={classes.title}>{this.state.message}</h3>
         <ClassCardsBooks {...this.state.cards} />
       </>
     );
