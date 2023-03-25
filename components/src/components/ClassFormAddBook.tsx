@@ -232,6 +232,7 @@ export class ClassFormAddBook extends React.Component {
         this.fileInput.current.value = '';
         this.setState({ message: 'Book created!' });
         setTimeout(() => this.setState({ message: '' }), 4000);
+        this.submitForm = true;
       }
     }
   }
