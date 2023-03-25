@@ -12,11 +12,6 @@ describe('AddForm', () => {
         <ClassFormAddBook />
       </BrowserRouter>
     );
-    // const input = screen.getByRole('title') as HTMLInputElement;
-    // expect(input.value).toBe('');
-    // fireEvent.change(input, { target: { value: 'go' } });
-    // const span = screen.getByRole('errorTitle');
-    // expect(span).toBe('');
     const form = container.querySelector('form');
     if (form) {
       const spanTitle = screen.getByRole('errorTitle');
