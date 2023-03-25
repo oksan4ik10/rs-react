@@ -24,6 +24,7 @@ export interface IAddBook {
   cards: {
     books: IOneBook[];
   };
+  message: string;
   errorTitle: string;
   errorDesc: string;
   errorYear: string;

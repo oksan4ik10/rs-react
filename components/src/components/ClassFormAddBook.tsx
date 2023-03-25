@@ -37,6 +37,7 @@ export class ClassFormAddBook extends React.Component {
       cards: {
         books: [],
       },
+      message: '',
       errorTitle: '',
       errorDesc: '',
       errorYear: '',
@@ -139,48 +140,62 @@ export class ClassFormAddBook extends React.Component {
     event.preventDefault();
     this.submitForm = false;
     const error = true;
-    const desc = this.desc.current?.value;
-    const title = this.title.current?.value;
-    const year = this.year.current?.value;
-    const file = this.fileInput.current?.value;
-    const author = this.selectRef.current?.value;
-    //validation
-    this.errorTitle(title);
-    this.errorDesc(desc);
-    this.errorYear(year);
-    this.errorAuthor(author);
-    this.errorRadio();
-    this.errorCheck();
-    this.errorFile(file);
+    if (
+      this.desc.current &&
+      this.title.current &&
+      this.year.current &&
+      this.fileInput.current &&
+      this.selectRef.current &&
+      this.radioRefDetective.current &&
+      this.radioRefFantasy.current &&
+      this.radioRefHorror.current &&
+      this.radioRefOther.current &&
+      this.checkYes.current &&
+      this.checkNo.current &&
+      this.fileInput.current
+    ) {
+      const desc = this.desc.current?.value;
+      const title = this.title.current?.value;
+      const year = this.year.current?.value;
+      const file = this.fileInput.current?.value;
+      const author = this.selectRef.current?.value;
+      //validation
+      this.errorTitle(title);
+      this.errorDesc(desc);
+      this.errorYear(year);
+      this.errorAuthor(author);
+      this.errorRadio();
+      this.errorCheck();
+      this.errorFile(file);
 
-    for (const key in this.state) {
-      const t = key as keyof IAddBook;
-      if (key === 'cards') continue;
-      if (this.state[t]) return;
-    }
+      for (const key in this.state) {
+        const t = key as keyof IAddBook;
+        if (key === 'cards' || key === 'message') continue;
+        if (this.state[t]) return;
+      }
 
-    let genre = '';
-    genre = this.radioRefDetective.current?.checked
-      ? genre + this.radioRefDetective.current.value + ','
-      : genre;
-    genre = this.radioRefFantasy.current?.checked
-      ? genre + this.radioRefFantasy.current.value + ','
-      : genre;
-    genre = this.radioRefHorror.current?.checked
-      ? genre + this.radioRefHorror.current.value + ','
-      : genre;
-    genre = this.radioRefOther.current?.checked
-      ? genre + this.radioRefOther.current?.value + ','
-      : genre;
+      let genre = '';
+      genre = this.radioRefDetective.current?.checked
+        ? genre + this.radioRefDetective.current.value + ','
+        : genre;
+      genre = this.radioRefFantasy.current?.checked
+        ? genre + this.radioRefFantasy.current.value + ','
+        : genre;
+      genre = this.radioRefHorror.current?.checked
+        ? genre + this.radioRefHorror.current.value + ','
+        : genre;
+      genre = this.radioRefOther.current?.checked
+        ? genre + this.radioRefOther.current?.value + ','
+        : genre;
 
-    if (genre) genre = genre.slice(0, genre.length - 1);
+      if (genre) genre = genre.slice(0, genre.length - 1);
 
-    const check = this.checkYes.current?.checked
-      ? true
-      : this.checkNo.current?.checked
-      ? false
-      : undefined;
-    if (this.fileInput.current) {
+      const check = this.checkYes.current?.checked
+        ? true
+        : this.checkNo.current?.checked
+        ? false
+        : undefined;
+
       if (this.fileInput.current.files) {
         const selecteds = this.fileInput.current.files[0];
         if (year && author && desc && title && genre && error) {
@@ -196,6 +211,21 @@ export class ClassFormAddBook extends React.Component {
           };
           this.state.cards.books.push(newBook);
           this.setState({ cards: this.state.cards });
+          this.title.current.value = '';
+          this.desc.current.value = '';
+          this.title.current.value = '';
+          this.year.current.value = '';
+          this.fileInput.current.value = '';
+          this.selectRef.current.value = '';
+          this.radioRefHorror.current.value = '';
+          this.radioRefFantasy.current.value = '';
+          this.radioRefDetective.current.value = '';
+          this.radioRefOther.current.value = '';
+          this.checkYes.current.value = '';
+          this.checkNo.current.value = '';
+          this.fileInput.current.value = '';
+          this.setState({ message: 'Book created!' });
+          setTimeout(() => this.setState({ message: '' }), 4000);
         }
       }
     }
@@ -204,6 +234,7 @@ export class ClassFormAddBook extends React.Component {
   render() {
     return (
       <>
+        <h3>{this.state.message}</h3>
         <form onSubmit={this.handleSubmit}>
           <label>
             Title

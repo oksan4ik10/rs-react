@@ -22,7 +22,6 @@ describe('App', () => {
         <ClassCardsBooks />
       </BrowserRouter>
     );
-    const foo = container.querySelector('.cards');
     expect(container).toBeEmptyDOMElement();
   });
 });
