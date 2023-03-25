@@ -1,0 +1,104 @@
+h1{
+    font-size: 60px;
+}
+.title{
+    text-align: center;
+}
+.forms{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.forms input{
+    margin: 0;
+    width: 100%;
+}
+.label{
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr;
+    grid-column-gap:10px;
+    align-items: center;
+    justify-content: start;
+}
+.error{
+    grid-column: 1/3;
+    justify-items: center;
+    text-align: center;
+    color: red;
+}
+.textarea{
+    resize: none;
+    border-radius: 10px;
+    border: 2px solid #cb8383;
+}
+.textarea:focus, select:focus{
+    border-color: #cbb1b1;
+    outline: none;
+}
+.select{
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #cb8383;
+}
+.checkbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    font-size: 0.9em;
+}
+.checkbox label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.checkbox input{
+    width: auto;
+    padding: 0;
+    margin-right: 10px;
+}
+
+input.custom{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border:1px solid #cbb1b1;;
+    display: block;
+    border-radius:2px;
+}
+
+input.custom:checked{
+    border:1px solid #cb8383;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%24d00' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.radio{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+}
+.radio label{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+  
+
+}
+.radio input{
+    appearance: none;
+    width: auto;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border:1px solid #cb8383;
+
+}
+.radio input:checked{
+    border:1px solid #cbb1b1;
+    background-color: #cb8383;
+}
