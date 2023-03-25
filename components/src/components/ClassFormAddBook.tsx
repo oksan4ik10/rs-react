@@ -172,8 +172,10 @@ export class ClassFormAddBook extends React.Component {
       let selecteds: File;
       if (this.fileInput.current.files) {
         selecteds = this.fileInput.current.files[0];
-        if (selecteds.size > 5 * 1024 * 1024)
-          this.setState({ errorFile: 'The file must be no larger than 5 MB' });
+        if (selecteds) {
+          if (selecteds.size > 5 * 1024 * 1024)
+            this.setState({ errorFile: 'The file must be no larger than 5 MB' });
+        }
       } else return;
 
       for (const key in this.state) {
@@ -373,8 +375,11 @@ export class ClassFormAddBook extends React.Component {
               accept="image/*"
               name="file"
               onChange={this.change}
+              role="file"
             />
-            <span className={classes.error}>{this.state.errorFile}</span>
+            <span className={classes.error} role="errorFile">
+              {this.state.errorFile}
+            </span>
           </label>
 
           <input type="submit" value="Create card" />

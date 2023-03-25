@@ -1,5 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import '@testing-library/jest-dom';
 
@@ -19,6 +20,7 @@ describe('AddForm', () => {
       const spanYear = screen.getByRole('errorYear');
       const spanAuthor = screen.getByRole('errorAuthor');
       const spanGenre = screen.getByRole('errorGenre');
+
       fireEvent.submit(form);
 
       expect(spanTitle).toHaveTextContent('Title field is empty');
