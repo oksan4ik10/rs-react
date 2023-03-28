@@ -4,13 +4,13 @@ import * as objBooks from '../date.json';
 
 import '@testing-library/jest-dom';
 
-import ClassCardsBooks from '../components/ClassCardsBooks';
+import { CardsBooksHook } from '../components/CardsBooksHook';
 
 describe('App', () => {
   it('Cards in main: ', async () => {
     render(
       <BrowserRouter>
-        <ClassCardsBooks {...objBooks} />
+        <CardsBooksHook {...objBooks} />
       </BrowserRouter>
     );
     const items = await screen.findAllByRole('image');
@@ -19,7 +19,7 @@ describe('App', () => {
   it('Cards empty: ', async () => {
     const { container } = render(
       <BrowserRouter>
-        <ClassCardsBooks />
+        <CardsBooksHook />
       </BrowserRouter>
     );
     expect(container).toBeEmptyDOMElement();

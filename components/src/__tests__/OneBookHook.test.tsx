@@ -4,7 +4,7 @@ import { IOneBook } from 'types/types';
 
 import '@testing-library/jest-dom';
 
-import { ClassOneBook } from '../components/ClassOneBook';
+import { OneBookHook } from '../components/OneBookHook';
 
 describe('ClassOneBook', () => {
   const item: IOneBook = {
@@ -19,7 +19,7 @@ describe('ClassOneBook', () => {
   it('Click like in book: ', async () => {
     const { container } = render(
       <BrowserRouter>
-        <ClassOneBook {...item} />
+        <OneBookHook {...item} />
       </BrowserRouter>
     );
     const foo = container.querySelector('.card__likes');
