@@ -6,13 +6,13 @@ import { About } from './pages/About';
 import { Notfound } from './pages/404';
 import { AddBook } from './pages/AddBook';
 
-import { Layout } from './components/Layout';
+import { LayoutHooks } from './components/LayoutHooks';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<LayoutHooks />}>
           <Route index element={<Mainpage />} />
           <Route path="about" element={<About />} />
           <Route path="add" element={<AddBook />} />

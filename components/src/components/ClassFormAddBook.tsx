@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, RefObject } from 'react';
-import { ClassOptions } from './ClassOptions';
+import { OptionsHook } from './OptionsHook';
 import { IAddBook, IChangeElement } from '../types/types';
-import ClassCardsBooks from './ClassCardsBooks';
+import { CardsBooksHook } from './CardsBooksHook';
 
 import classes from '../styles/ClassFormAddBook.module.css';
 
@@ -280,7 +280,7 @@ export class ClassFormAddBook extends React.Component {
               onChange={this.change}
               className={classes.select}
             >
-              <ClassOptions />
+              <OptionsHook />
             </select>
             <span className={classes.error} role="errorAuthor">
               {this.state.errorAuthor}
@@ -385,7 +385,7 @@ export class ClassFormAddBook extends React.Component {
           <input type="submit" value="Create card" />
         </form>
         <h3 className={classes.title}>{this.state.message}</h3>
-        <ClassCardsBooks {...this.state.cards} />
+        <CardsBooksHook {...this.state.cards} />
       </>
     );
   }

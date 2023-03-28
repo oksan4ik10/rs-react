@@ -20,6 +20,9 @@ export interface IOneBook {
   year: number;
   check?: boolean;
 }
+export interface IObjDate {
+  books?: IOneBook[];
+}
 export interface IAddBook {
   cards: {
     books: IOneBook[];
