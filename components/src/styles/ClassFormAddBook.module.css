@@ -3,6 +3,7 @@ h1{
 }
 .title{
     text-align: center;
+    font-size: 2em;
 }
 .forms{
     max-width: 500px;

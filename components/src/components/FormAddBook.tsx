@@ -1,16 +1,19 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Field, useForm } from 'react-hook-form';
 import classes from '../styles/ClassFormAddBook.module.css';
 import { InputFormAdd } from './Forms/InputFormAdd';
 import { SelectFormAdd } from './Forms/SelectFormAdd';
 
+import { CardsBooksHook } from './CardsBooksHook';
+
+import { IObjDate, IOneBook } from 'types/types';
 export interface IDateForm {
-  title?: string;
-  checkbox?: true;
-  desc?: string;
-  year?: string;
-  file?: FileList;
-  author?: string;
+  title: string;
+  checkbox: true;
+  desc: string;
+  year: string;
+  file: FileList;
+  author: string;
   check: string[];
   radio: string[];
 }
@@ -19,7 +22,11 @@ export const FormAddBook = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<IDateForm>();
+
+  const [books, setBooks] = useState<IObjDate>({});
+  const [createBook, setCreateBook] = useState('');
 
   const regCheck = register('check', {
     required: 'Please select at least one genre',
@@ -30,10 +37,28 @@ export const FormAddBook = () => {
   });
 
   function onSubmit(date: IDateForm) {
-    console.log(date);
     let selecteds: File;
     if (date.file && date.file[0]) {
       selecteds = date.file[0];
+      const numYear = Number(date.year.split('-')[0]);
+      const newBook: IOneBook = {
+        author: date.author,
+        desc: date.desc,
+        title: date.title,
+        genre: date.check.join(', '),
+        year: numYear,
+        img: URL.createObjectURL(selecteds),
+        check: date.radio ? true : false,
+      };
+      if (books.books) {
+        books.books.push(newBook);
+      } else {
+        books['books'] = [newBook];
+      }
+      setBooks(books);
+      reset();
+      setCreateBook('Book created!');
+      setTimeout(() => setCreateBook(''), 3000);
     } else return;
   }
 
@@ -216,14 +241,11 @@ export const FormAddBook = () => {
         >
           Upload
         </InputFormAdd>
-        {/*
-        <InputFormAdd register={register('checkbox')} errors={errors} type="checkbox" value="A" />
-        <InputFormAdd register={register('checkbox')} errors={errors} type="checkbox" value="B" />
-        <InputFormAdd register={register('checkbox')} errors={errors} type="checkbox" value="C" /> */}
-        <button type="submit">Click</button>
-        {/* <input {...register('test', { required: 'This is required.' })} />
-        {errors.test && <p>{errors.test.message}</p>} */}
+
+        <input type="submit" value="Create card" />
       </form>
+      <h3 className={classes.title}>{createBook}</h3>
+      <CardsBooksHook {...books} />
     </>
   );
 };
