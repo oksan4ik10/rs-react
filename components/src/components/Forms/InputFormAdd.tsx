@@ -1,6 +1,5 @@
-import React, { LegacyRef, ChangeEvent, FormEvent, RefObject, Children } from 'react';
-import type { FieldError, DeepMap, FieldErrors, UseFormRegister } from 'react-hook-form';
-import { IDateForm } from '../FormAddBook';
+import React from 'react';
+import type { FieldError } from 'react-hook-form';
 
 type InputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
