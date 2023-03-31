@@ -21,7 +21,8 @@ type ComponentProps = {
 export const InputFormAdd = (props: React.PropsWithChildren<ComponentProps>) => {
   const { register, errors, className, classNameError, type, accept, value, classNameInput } =
     props;
-  const name = register.name;
+  const name = register.name ? register.name : '';
+  const role = 'error' + name[0].toUpperCase() + name?.slice(1);
 
   return (
     <>
@@ -41,7 +42,7 @@ export const InputFormAdd = (props: React.PropsWithChildren<ComponentProps>) => 
         />
 
         {errors && (
-          <span className={classNameError} role="errorTitle">
+          <span className={classNameError} role={role}>
             {errors.message}
           </span>
         )}

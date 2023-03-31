@@ -19,7 +19,7 @@ type ComponentSelectProps = {
 export const SelectFormAdd = (props: React.PropsWithChildren<ComponentSelectProps>) => {
   const { register, errors, className, classNameError, classNameSelect } = props;
   const name = register.name ? register.name : '';
-  const role = 'errors' + name[0].toUpperCase() + name?.slice(1);
+  const role = 'error' + name[0].toUpperCase() + name?.slice(1);
 
   return (
     <>
