@@ -1,4 +1,4 @@
-import * as objBooks from '../date.json';
+import * as objBooks from '../../date.json';
 
 export const OptionsHook = () => {
   const authors = Array.from(new Set(objBooks.books.map((item) => item.author)));
