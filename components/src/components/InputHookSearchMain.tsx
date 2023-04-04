@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent, useEffect } from 'react';
 
 export const InputHookSearchMain = () => {
   const dateLocal = localStorage.getItem('date');
@@ -6,6 +6,10 @@ export const InputHookSearchMain = () => {
   if (dateLocal) dateInput = dateLocal;
   else dateInput = '';
   const [date, setDate] = useState(dateInput);
+
+  useEffect(() => {
+    localStorage.setItem('date', dateInput);
+  }, [dateInput]);
 
   function changeInput(e: ChangeEvent<HTMLInputElement>) {
     const value = e.target.value;
