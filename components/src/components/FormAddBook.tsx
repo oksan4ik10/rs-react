@@ -25,6 +25,11 @@ export const FormAddBook = () => {
     reset,
   } = useForm<IDateForm>();
 
+  async function openModal(id: string) {
+    const date = await fetch(`https://rs-server-react.onrender.com/api/books/id=${id}`);
+    const res = await date.json();
+  }
+
   const [books, setBooks] = useState<IOneBook[]>([]);
   const [createBook, setCreateBook] = useState('');
 
@@ -42,6 +47,7 @@ export const FormAddBook = () => {
       selecteds = date.file[0];
       const numYear = Number(date.year.split('-')[0]);
       const newBook: IOneBook = {
+        _id: '3432',
         author: date.author,
         desc: date.desc,
         title: date.title,
@@ -241,7 +247,7 @@ export const FormAddBook = () => {
         <input type="submit" value="Create card" />
       </form>
       <h3 className={classes.title}>{createBook}</h3>
-      <CardsBooksHook books={books} />
+      <CardsBooksHook books={books} openModal={openModal} />
     </>
   );
 };

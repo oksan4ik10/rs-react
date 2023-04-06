@@ -1,16 +1,20 @@
 import { IOneBook } from '../types/types';
 import { OneBookHook } from './OneBookHook';
 
-interface IMyProps {
+interface IPropsCards {
   books: IOneBook[];
+  openModal: (id: string) => void;
 }
 
-export const CardsBooksHook = (props: IMyProps) => {
+export const CardsBooksHook = (props: IPropsCards) => {
   const books = props.books;
   return (
     <>
       <div className="cards">
-        {books && books.map((item) => <OneBookHook key={item._id} {...item} />)}
+        {books &&
+          books.map((item) => (
+            <OneBookHook key={item._id} books={item} openModal={props.openModal} />
+          ))}
       </div>
     </>
   );

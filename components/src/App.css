@@ -106,3 +106,37 @@ input:focus {
 .card__likes:hover {
   fill: rgba(255, 0, 0, 0.5);
 }
+
+.modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color:rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal .card{
+  width: 50%;
+  background-color:white;
+  position: relative;
+}
+.modal .card__desc{
+  overflow: visible;
+  -webkit-line-clamp:initial;
+}
+.modal .card__title{
+  overflow: visible;
+}
+.modal .card__head{
+  flex-wrap: wrap;
+}
+
+.close {cursor: pointer; position: absolute; top: -20px; right: -10px;}
+.close:before, .close:after {content: ""; position: absolute; width: 24px; height: 4px; background: gray;}
+.close:before {transform: rotate(45deg);}
+.close:after {transform: rotate(-45deg);}

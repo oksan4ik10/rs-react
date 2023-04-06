@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import { IOneBook, IMyStatelikes } from '../types/types';
 
-export const OneBookHook = (props: IOneBook) => {
+interface IPropsOneBook {
+  books: IOneBook;
+  openModal: (id: string) => void;
+}
+
+export const OneBookHook = (props: IPropsOneBook) => {
+  const book = props.books;
   let likeProps: IMyStatelikes = {
     date: '',
     count: 10,
   };
-  if (props.check) {
+  if (book.check) {
     likeProps = {
       date: 'active',
       count: 11,
@@ -27,28 +33,32 @@ export const OneBookHook = (props: IOneBook) => {
       });
     }
   }
+
+  function clickBook() {
+    props.openModal(book._id);
+  }
   return (
     <>
-      <div className="card">
-        <img src={props.img} className="card__img" />
+      <div className="card" onClick={clickBook}>
+        <img src={book.img} className="card__img" />
         <div className="card__info">
           <div className="card__head">
-            <h3 className="card__title">{props.title}</h3>
+            <h3 className="card__title">{book.title}</h3>
             <div className="card__year">
               <span>Year: </span>
-              {props.year}
+              {book.year}
             </div>
           </div>
 
           <div className="card__author">
             <span>Author: </span>
-            {props.author}
+            {book.author}
           </div>
           <div className="card__genre">
             <span>Genre: </span>
-            {props.genre}
+            {book.genre}
           </div>
-          <div className="card__desc">{props.desc}</div>
+          <div className="card__desc">{book.desc}</div>
           <div className="card__likes" onClick={changeState}>
             <svg role="image" className={'card__like ' + like.date}>
               <use xlinkHref="/like.svg#like"></use>
