@@ -6,7 +6,7 @@ import { SelectFormAdd } from './Forms/SelectFormAdd';
 
 import { CardsBooksHook } from './CardsBooksHook';
 
-import { IObjDate, IOneBook } from 'types/types';
+import { IOneBook } from 'types/types';
 export interface IDateForm {
   title: string;
   checkbox: true;
@@ -25,7 +25,7 @@ export const FormAddBook = () => {
     reset,
   } = useForm<IDateForm>();
 
-  const [books, setBooks] = useState<IObjDate>({});
+  const [books, setBooks] = useState<IOneBook[]>([]);
   const [createBook, setCreateBook] = useState('');
 
   const regCheck = register('check', {
@@ -50,11 +50,7 @@ export const FormAddBook = () => {
         img: URL.createObjectURL(selecteds),
         check: date.radio ? true : false,
       };
-      if (books.books) {
-        books.books.push(newBook);
-      } else {
-        books['books'] = [newBook];
-      }
+      books.push(newBook);
       setBooks(books);
       reset();
       setCreateBook('Book created!');
@@ -245,7 +241,7 @@ export const FormAddBook = () => {
         <input type="submit" value="Create card" />
       </form>
       <h3 className={classes.title}>{createBook}</h3>
-      <CardsBooksHook {...books} />
+      <CardsBooksHook books={books} />
     </>
   );
 };

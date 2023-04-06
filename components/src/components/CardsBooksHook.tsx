@@ -1,15 +1,16 @@
-import { IObjDate } from '../types/types';
+import { IOneBook } from '../types/types';
 import { OneBookHook } from './OneBookHook';
 
-export const CardsBooksHook = (props: IObjDate) => {
+interface IMyProps {
+  books: IOneBook[];
+}
+
+export const CardsBooksHook = (props: IMyProps) => {
   const books = props.books;
-  if (!books) return <></>;
   return (
     <>
       <div className="cards">
-        {books.map((item, index) => (
-          <OneBookHook key={index} {...item} />
-        ))}
+        {books && books.map((item) => <OneBookHook key={item._id} {...item} />)}
       </div>
     </>
   );

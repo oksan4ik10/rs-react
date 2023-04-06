@@ -1,3 +1,4 @@
+@import url('../src/styles/loader.css');
 .App {
   display: flex;
   flex-direction: column;

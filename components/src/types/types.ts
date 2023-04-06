@@ -12,6 +12,7 @@ export interface IMyStatelikes {
 }
 
 export interface IOneBook {
+  _id: string;
   author: string;
   desc: string;
   genre: string;
