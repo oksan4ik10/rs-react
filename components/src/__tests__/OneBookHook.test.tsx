@@ -8,6 +8,7 @@ import { OneBookHook } from '../components/OneBookHook';
 
 describe('ClassOneBook', () => {
   const item: IOneBook = {
+    _id: '121',
     author: 'test',
     desc: 'test',
     genre: 'test',
@@ -19,7 +20,7 @@ describe('ClassOneBook', () => {
   it('Click like in book: ', async () => {
     const { container } = render(
       <BrowserRouter>
-        <OneBookHook {...item} />
+        <OneBookHook books={item} openModal={() => undefined} />
       </BrowserRouter>
     );
     const foo = container.querySelector('.card__likes');

@@ -11,7 +11,7 @@ export const CardsBooksHook = (props: IPropsCards) => {
   return (
     <>
       <div className="cards">
-        {books &&
+        {books.length > 0 &&
           books.map((item) => (
             <OneBookHook key={item._id} books={item} openModal={props.openModal} />
           ))}

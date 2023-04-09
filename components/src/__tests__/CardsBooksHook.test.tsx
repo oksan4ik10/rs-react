@@ -1,6 +1,9 @@
 import { BrowserRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
-import * as objBooks from '../date.json';
+import { server, rest } from './testServer';
+import fetch from 'cross-fetch';
+
+import { getDate } from '../pages/Mainpage';
 
 import '@testing-library/jest-dom';
 
@@ -24,6 +27,6 @@ describe('App', () => {
         <CardsBooksHook books={[]} openModal={() => null} />
       </BrowserRouter>
     );
-    expect(container).toBeEmptyDOMElement();
+    expect(container).not.toBeEmptyDOMElement();
   });
 });

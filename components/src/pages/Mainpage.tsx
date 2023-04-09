@@ -5,6 +5,12 @@ import { useEffect, useState } from 'react';
 import { IOneBook } from 'types/types';
 import { ModalBook } from '../components/ModalBook';
 
+export const getDate = async () => {
+  const date = await fetch('https://rs-server-react.onrender.com/api/books/pagination');
+  const res = await date.json();
+  return res;
+};
+
 export const Mainpage = () => {
   const [books, setBooks] = useState<IOneBook[]>([]);
   const [isLoader, setLoader] = useState(true);
@@ -18,8 +24,8 @@ export const Mainpage = () => {
         returnSearchDate(localDate);
         return;
       }
-      const date = await fetch('https://rs-server-react.onrender.com/api/books/pagination');
-      const res = await date.json();
+      const res = await getDate();
+
       setLoader(false);
       setBooks(res);
     })();
