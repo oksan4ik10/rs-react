@@ -9,7 +9,6 @@ export const Mainpage = () => {
   const [books, setBooks] = useState<IOneBook[]>([]);
   const [isLoader, setLoader] = useState(true);
 
-  const [isModal, setModal] = useState(true);
   const [dateModal, setDateModal] = useState<IOneBook>();
 
   useEffect(() => {
