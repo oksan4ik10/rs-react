@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { IOneBook } from 'types/types';
 import { ModalBook } from '../components/ModalBook';
 
+import { booksAPI } from '../redux/services/BooksServices';
+
 export const getDate = async () => {
   const date = await fetch('https://rs-server-react.onrender.com/api/books/pagination');
   const res = await date.json();
@@ -12,39 +14,27 @@ export const getDate = async () => {
 };
 
 export const Mainpage = () => {
-  const [books, setBooks] = useState<IOneBook[]>([]);
-  const [isLoader, setLoader] = useState(true);
-
   const [dateModal, setDateModal] = useState<IOneBook>();
+
+  const { data: dateBooks, error, isLoading, refetch } = booksAPI.useFetchAllPostsQuery(7);
+  console.log(dateBooks);
 
   useEffect(() => {
     (async () => {
       const localDate = localStorage.getItem('date');
       if (localDate) {
-        returnSearchDate(localDate);
+        // returnSearchDate(localDate);
         return;
       }
       const res = await getDate();
-
-      setLoader(false);
-      setBooks(res);
     })();
   }, []);
-  async function returnSearchDate(query: string) {
-    setLoader(true);
-    const date = await fetch(
-      `https://rs-server-react.onrender.com/api/books/search?query=${query}`
-    );
-    const res = await date.json();
-    setLoader(false);
-    setBooks(res);
-  }
 
   async function openModal(id: string) {
-    setLoader(true);
+    // setLoader(true);
     const date = await fetch(`https://rs-server-react.onrender.com/api/books/${id}`);
     const res = await date.json();
-    setLoader(false);
+    // setLoader(false);
     setDateModal(res);
   }
   function closeModal() {
@@ -53,10 +43,11 @@ export const Mainpage = () => {
   return (
     <>
       <h1>RS-Books</h1>
-      <InputHookSearchMain search={returnSearchDate} />
-      {isLoader && <Loader />}
-      {books.length > 0 && <CardsBooksHook books={books} openModal={openModal} />}
-      {books.length === 0 && <p>Книг не найдено</p>}
+      {/* <InputHookSearchMain search={returnSearchDate} /> */}
+      {isLoading && <Loader />}
+      {dateBooks && <CardsBooksHook books={dateBooks} openModal={openModal} />}
+      {error && <h1>Произошла ошибка при загрузке</h1>}
+      {dateBooks && dateBooks.length === 0 && <p>Книг не найдено</p>}
       {dateModal && <ModalBook book={dateModal} closeModal={closeModal} />}
     </>
   );
