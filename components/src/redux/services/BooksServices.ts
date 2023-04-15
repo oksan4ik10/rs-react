@@ -4,16 +4,21 @@ import { IOneBook } from '../../types/types';
 export const booksAPI = createApi({
   reducerPath: 'booksAPI',
   baseQuery: fetchBaseQuery({ baseUrl: 'https://rs-server-react.onrender.com/api/books' }),
-  tagTypes: ['Books'],
+  tagTypes: ['Books', 'OneBook'],
   endpoints: (build) => ({
-    fetchAllPosts: build.query<IOneBook[], number>({
-      query: (limit = 5) => ({
+    fetchAllBooks: build.query<IOneBook[], number>({
+      query: (page = 0) => ({
         url: `/pagination`,
         params: {
-          page: limit,
+          page: page,
         },
       }),
       providesTags: () => ['Books'],
+    }),
+    fetchOneBooks: build.query<IOneBook, string>({
+      query: (id) => ({
+        url: `/${id}`,
+      }),
     }),
   }),
 });

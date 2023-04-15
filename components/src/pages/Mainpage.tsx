@@ -13,11 +13,17 @@ export const getDate = async () => {
   return res;
 };
 
+interface IData {
+  data: IOneBook;
+}
+
 export const Mainpage = () => {
   const [dateModal, setDateModal] = useState<IOneBook>();
+  const [isLoaderModal, setLoaderModal] = useState(false);
 
-  const { data: dateBooks, error, isLoading, refetch } = booksAPI.useFetchAllPostsQuery(7);
-  console.log(dateBooks);
+  const { data: dateBooks, error, isLoading } = booksAPI.useFetchAllBooksQuery(0);
+
+  const [getOneBook] = booksAPI.useLazyFetchOneBooksQuery();
 
   useEffect(() => {
     (async () => {
@@ -26,16 +32,14 @@ export const Mainpage = () => {
         // returnSearchDate(localDate);
         return;
       }
-      const res = await getDate();
     })();
   }, []);
 
   async function openModal(id: string) {
-    // setLoader(true);
-    const date = await fetch(`https://rs-server-react.onrender.com/api/books/${id}`);
-    const res = await date.json();
-    // setLoader(false);
-    setDateModal(res);
+    setLoaderModal(true);
+    const { data } = await getOneBook(id);
+    setLoaderModal(false);
+    setDateModal(data);
   }
   function closeModal() {
     setDateModal(undefined);
@@ -44,7 +48,7 @@ export const Mainpage = () => {
     <>
       <h1>RS-Books</h1>
       {/* <InputHookSearchMain search={returnSearchDate} /> */}
-      {isLoading && <Loader />}
+      {(isLoading || isLoaderModal) && <Loader />}
       {dateBooks && <CardsBooksHook books={dateBooks} openModal={openModal} />}
       {error && <h1>Произошла ошибка при загрузке</h1>}
       {dateBooks && dateBooks.length === 0 && <p>Книг не найдено</p>}

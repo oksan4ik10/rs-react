@@ -10,7 +10,7 @@ export const ModalBook = (props: IModalBook) => {
 
   return (
     <>
-      <div className="modal">
+      <div className="modal" onClick={props.closeModal}>
         <div className="card">
           <div className="close" onClick={props.closeModal}></div>
           <img src={book.img} className="card__img" />
