@@ -1,24 +1,18 @@
-import { useState, ChangeEvent, useEffect, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
+import { useAppSelector } from '../redux/hooks/redux';
 
 interface IPropsInput {
   search: (q: string) => void;
 }
 
 export const InputHookSearchMain = (props: IPropsInput) => {
-  const dateLocal = localStorage.getItem('date');
-  let dateInput: string;
-  if (dateLocal) dateInput = dateLocal;
-  else dateInput = '';
-  const [date, setDate] = useState(dateInput);
+  const { searchQuery } = useAppSelector((state) => state.SearchInput);
 
-  useEffect(() => {
-    localStorage.setItem('date', dateInput);
-  }, [dateInput]);
+  const [date, setDate] = useState(searchQuery);
 
   function inputDate(e: ChangeEvent<HTMLInputElement>) {
     const value = e.target.value;
     setDate(value);
-    localStorage.setItem('date', value);
   }
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
