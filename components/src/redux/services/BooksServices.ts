@@ -15,6 +15,15 @@ export const booksAPI = createApi({
       }),
       providesTags: () => ['Books'],
     }),
+    fetchSearchBooks: build.query<IOneBook[], string>({
+      query: (str = '') => ({
+        url: `/search`,
+        params: {
+          query: str,
+        },
+      }),
+      providesTags: () => ['Books'],
+    }),
     fetchOneBooks: build.query<IOneBook, string>({
       query: (id) => ({
         url: `/${id}`,
