@@ -73,7 +73,7 @@ export const FormAddBook = () => {
             required: 'Title field is empty',
             minLength: { value: 3, message: 'Length title < 3' },
             pattern: {
-              value: /^[A-Z]/,
+              value: /^[A-Z,А-Я]/,
               message: 'Title must start with a capital letter',
             },
           })}
@@ -88,7 +88,7 @@ export const FormAddBook = () => {
             required: 'Desc field is empty',
             minLength: { value: 5, message: 'Length desc < 5' },
             pattern: {
-              value: /^[A-Z]/,
+              value: /^[A-Z, А-Я]/,
               message: 'Desc must start with a capital letter',
             },
           })}
