@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { booksAPI } from '../services/BooksServices';
+import SearchInput from './reducer/SearchInput';
 
 const rootReducer = combineReducers({
+  SearchInput,
   [booksAPI.reducerPath]: booksAPI.reducer,
 });
 
