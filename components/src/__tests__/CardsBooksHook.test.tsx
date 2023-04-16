@@ -1,9 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
-import { server, rest } from './testServer';
 import fetch from 'cross-fetch';
-
-import { getDate } from '../pages/Mainpage';
 
 import '@testing-library/jest-dom';
 

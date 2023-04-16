@@ -1,5 +1,9 @@
 import { BrowserRouter } from 'react-router-dom';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { setupStore } from '../redux/store/store';
+
+const store = setupStore();
 
 import '@testing-library/jest-dom';
 
@@ -8,9 +12,11 @@ import { FormAddBook } from '../components/FormAddBook';
 describe('AddForm', () => {
   it('Empty area ', async () => {
     const { container } = render(
-      <BrowserRouter>
-        <FormAddBook />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <FormAddBook />
+        </BrowserRouter>
+      </Provider>
     );
     const form = container.querySelector('form');
     if (form) {

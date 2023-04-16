@@ -27,10 +27,6 @@ export const FormAddBook = () => {
     reset,
   } = useForm<IDateForm>();
 
-  function openModal(id: string) {
-    return id;
-  }
-
   const { books } = useAppSelector((state) => state.SubmitFormSlice);
   const { addBooks } = submitFormSlice.actions;
   const dispatch = useAppDispatch();
@@ -252,7 +248,7 @@ export const FormAddBook = () => {
         <input type="submit" value="Create card" />
       </form>
       <h3 className={classes.title}>{createBook}</h3>
-      <CardsBooksHook books={books} openModal={openModal} />
+      <CardsBooksHook books={books} openModal={(id) => id} />
     </>
   );
 };
