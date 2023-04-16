@@ -2,9 +2,11 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { booksAPI } from '../services/BooksServices';
 import SearchInput from './reducer/SearchInput';
+import SubmitFormSlice from './reducer/SubmitFormSlice';
 
 const rootReducer = combineReducers({
   SearchInput,
+  SubmitFormSlice,
   [booksAPI.reducerPath]: booksAPI.reducer,
 });
 

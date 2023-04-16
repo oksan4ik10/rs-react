@@ -7,6 +7,8 @@ import { SelectFormAdd } from './Forms/SelectFormAdd';
 import { CardsBooksHook } from './CardsBooksHook';
 
 import { IOneBook } from 'types/types';
+import { useAppSelector, useAppDispatch } from '../redux/hooks/redux';
+import { submitFormSlice } from '../redux/store/reducer/SubmitFormSlice';
 export interface IDateForm {
   title: string;
   checkbox: true;
@@ -25,12 +27,14 @@ export const FormAddBook = () => {
     reset,
   } = useForm<IDateForm>();
 
-  async function openModal(id: string) {
-    const date = await fetch(`https://rs-server-react.onrender.com/api/books/id=${id}`);
-    const res = await date.json();
+  function openModal(id: string) {
+    return id;
   }
 
-  const [books, setBooks] = useState<IOneBook[]>([]);
+  const { books } = useAppSelector((state) => state.SubmitFormSlice);
+  const { addBooks } = submitFormSlice.actions;
+  const dispatch = useAppDispatch();
+
   const [createBook, setCreateBook] = useState('');
 
   const regCheck = register('check', {
@@ -56,8 +60,9 @@ export const FormAddBook = () => {
         img: URL.createObjectURL(selecteds),
         check: date.radio ? true : false,
       };
-      books.push(newBook);
-      setBooks(books);
+
+      dispatch(addBooks(newBook));
+
       reset();
       setCreateBook('Book created!');
       setTimeout(() => setCreateBook(''), 3000);
