@@ -1,5 +1,8 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
+// import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
 import { IOneBook } from '../../types/types';
+
+import pkg from '@reduxjs/toolkit/dist/query/react/index.js';
+const { createApi, fetchBaseQuery } = pkg;
 
 interface IMainRequest {
   page: number;
