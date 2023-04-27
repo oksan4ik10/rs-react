@@ -1,13 +1,6 @@
-import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 export const LayoutHooks = () => {
-  // const [date, setDate] = useState(window.location.href);
-
-  // function changeRoute() {
-  //   setDate(window.location.href);
-  // }
-
   return (
     <>
       <header>

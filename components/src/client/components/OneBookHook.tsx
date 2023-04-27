@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IOneBook, IMyStatelikes } from '../types/types';
+import { IOneBook, IMyStatelikes } from '../../types/types';
 
 interface IPropsOneBook {
   books: IOneBook;

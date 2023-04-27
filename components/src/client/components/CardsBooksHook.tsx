@@ -1,4 +1,4 @@
-import { IOneBook } from '../types/types';
+import { IOneBook } from '../../types/types';
 import { OneBookHook } from './OneBookHook';
 
 interface IPropsCards {
