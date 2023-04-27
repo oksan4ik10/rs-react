@@ -1,11 +1,15 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { IOneBook } from '../../types/types';
+import * as rtkQuery from '@reduxjs/toolkit/dist/query/react/index.js';
+import createApi from './createApi';
+import { IOneBook } from '../../../types/types';
 
 interface IMainRequest {
   page: number;
   query: string;
   type: string;
 }
+
+type TypeRtkQuery = typeof rtkQuery & { default?: unknown };
+const { fetchBaseQuery } = ((rtkQuery as TypeRtkQuery).default ?? rtkQuery) as typeof rtkQuery;
 
 export const booksAPI = createApi({
   reducerPath: 'booksAPI',
