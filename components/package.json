@@ -14,7 +14,7 @@
     "format": "npm run prettier:fix && npm run lint:fix",
     "test": "vitest --coverage",
     "test:cypress": "start-server-and-test start http://localhost:5173/ 'npx cypress run' && npx nyc report --reporter=text-summary",
-    "cypress": "cypress run --e2e",
+    "cypress": "cypress open --e2e",
     "nyc": "npx nyc report --reporter=text-summary",
     "deploy": "npm run build && npx gh-pages -d dist -e forms",
     "build:test": "conc \"npm:build:*\"",
