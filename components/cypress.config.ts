@@ -1,22 +1,15 @@
+import codeCoverageTask from '@cypress/code-coverage/task';
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  defaultCommandTimeout: 10000,
-  video: false,
-
-  waitForAnimations: true,
   e2e: {
-    supportFile: false,
     baseUrl: 'http://localhost:5173',
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      codeCoverageTask(on, config);
+      return config;
     },
   },
-
-  component: {
-    devServer: {
-      framework: 'react',
-      bundler: 'vite',
-    },
-  },
+  video: false,
+  fixturesFolder: false,
+  screenshotOnRunFailure: false,
 });
